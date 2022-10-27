@@ -14,10 +14,6 @@ app.use('/users', require('./routes/users.routes.ts'));
 app.use('/courses', require('./routes/courses.routes.ts'));
 app.use('/login', require('./routes/login.routes.ts'));
 
-
-
-
-
 app.listen(80, () => {
   console.log('Servidor corriendo en el puerto 80.');
 });
