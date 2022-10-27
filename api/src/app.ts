@@ -10,6 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/', require('./routes/index.routes.ts'));
+app.use('/users', require('./routes/users.routes.ts'));
+app.use('/courses', require('./routes/courses.routes.ts'));
+app.use('/login', require('./routes/login.routes.ts'));
 
 
 
