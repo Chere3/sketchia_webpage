@@ -1,0 +1,28 @@
+{
+  "name": "sketchia-api",
+  "version": "1.0.0",
+  "description": "La parte backend de sketchia que sirve para dar con una api bonita, sencilla y rápida.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "nodemon src/index.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chere3/sketchia_proyecto.git"
+  },
+  "keywords": [
+    "api",
+    "proyecto",
+    "sketchia"
+  ],
+  "author": "Cheree",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chere3/sketchia_proyecto/issues"
+  },
+  "homepage": "https://github.com/Chere3/sketchia_proyecto#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
