@@ -10,10 +10,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use('/', require('./routes/index.routes.ts'));
-app.use('/users', require('./routes/users.routes.ts'));
-app.use('/courses', require('./routes/courses.routes.ts'));
-app.use('/login', require('./routes/auth.routes.ts'));
+app.use('v0/', require('./routes/index.routes.ts'));
+app.use('v0/users', require('./routes/users.routes.ts'));
+app.use('v0/courses', require('./routes/courses.routes.ts'));
+app.use('v0/login', require('./routes/auth.routes.ts'));
 
 // Configuración de todas las variables.
 dotConfig();

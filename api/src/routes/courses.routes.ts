@@ -7,6 +7,10 @@ router.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
+router.get("/:id", (req, res) => {
+    res.send("Hello World!");
+});
+
 router.post("/add", (req, res) => {
     res.send("Hello World!");
 });
