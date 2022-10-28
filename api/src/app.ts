@@ -1,5 +1,6 @@
 import express from 'express';
 import helmet from 'helmet';
+import {config as dotConfig} from 'dotenv';
 
 const app = express();
 
@@ -12,10 +13,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', require('./routes/index.routes.ts'));
 app.use('/users', require('./routes/users.routes.ts'));
 app.use('/courses', require('./routes/courses.routes.ts'));
-app.use('/login', require('./routes/login.routes.ts'));
+app.use('/login', require('./routes/auth.routes.ts'));
 
-app.listen(80, () => {
-  console.log('Servidor corriendo en el puerto 80.');
+// Configuración de todas las variables.
+dotConfig();
+
+export const config = {
+  serverConfig: {
+    port: process.env.PORT || 3000 as number,
+    url: process.env.URL || 'http://localhost',
+  }
+}
+
+app.listen(config.serverConfig.port, () => {
+  console.log(`🔌🔦 | Servidor corriendo en el url ${config.serverConfig.url}:${config.serverConfig.port}`);
 });
 
 
