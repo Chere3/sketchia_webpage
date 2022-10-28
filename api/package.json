@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "nodemon src/index.ts",
+    "start": "tsc",
     "build": "tsc"
   },
   "repository": {
@@ -23,6 +24,9 @@
   },
   "homepage": "https://github.com/Chere3/sketchia_proyecto#readme",
   "dependencies": {
+    "@types/csurf": "^1.11.2",
+    "csrf": "^3.1.0",
+    "csurf": "^1.11.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "helmet": "^6.0.0"

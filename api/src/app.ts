@@ -1,8 +1,10 @@
-import express from 'express';
+import * as express from 'express';
 import helmet from 'helmet';
 import {config as dotConfig} from 'dotenv';
+import * as csurf from 'csurf';
 
-const app = express();
+const app = express()
+const csurfProtection = csurf({cookie: true});
 
 // Middlewares
 app.use(helmet());
