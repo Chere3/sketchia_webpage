@@ -2,6 +2,7 @@ import * as express from 'express';
 import helmet from 'helmet';
 import {config as dotConfig} from 'dotenv';
 import * as csurf from 'csurf';
+import * as compression from 'compression';
 import { createClient } from '@supabase/supabase-js';
 
 const app = express()
@@ -11,9 +12,12 @@ const csurfProtection = csurf({cookie: true});
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(compression({level: 5}));
+app.use(csurfProtection);
 
 // Routes
 app.use('/v0/users', require('./routes/users.routes.ts'));
+app.use('/v0/files', require('./routes/files.routes.ts'));
 app.use('/v0/courses', require('./routes/courses.routes.ts'));
 app.use('/v0/login', require('./routes/auth.routes.ts'));
 app.use('/v0/staff', require('./routes/staff.routes.ts'));

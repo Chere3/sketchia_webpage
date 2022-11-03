@@ -13,9 +13,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Aprende a <span>texto variable</span> con Sketchia.
+          Aprende a <span className={styles.italic}>texto variable</span> con Sketchia.
         </h1>
-
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" />
         <p className={styles.description}>
           Más de 3000 personas estan aprendiendo actualmente con Sketchia.
         </p>
@@ -31,7 +31,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{' Sketchia '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>

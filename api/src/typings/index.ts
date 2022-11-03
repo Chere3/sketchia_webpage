@@ -25,5 +25,8 @@ const endpoints = {
     }
 }
 
+export type AcceptedFiles = string | NodeJS.ReadableStream | ArrayBuffer | ArrayBufferView | Blob | Buffer | File | FormData | ReadableStream<Uint8Array> | URLSearchParams
+
+
 export type endpoints = typeof endpoints
 export type valueOf<T> = T[keyof T]
