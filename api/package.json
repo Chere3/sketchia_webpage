@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Chere3/sketchia_proyecto#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.0.5",
     "@types/csurf": "^1.11.2",
     "csrf": "^3.1.0",
     "csurf": "^1.11.0",

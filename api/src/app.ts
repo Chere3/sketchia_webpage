@@ -2,6 +2,7 @@ import * as express from 'express';
 import helmet from 'helmet';
 import {config as dotConfig} from 'dotenv';
 import * as csurf from 'csurf';
+import { createClient } from '@supabase/supabase-js';
 
 const app = express()
 const csurfProtection = csurf({cookie: true});
@@ -27,8 +28,16 @@ export const config = {
   serverConfig: {
     port: process.env.PORT || 3000 as number,
     url: process.env.URL || 'http://localhost',
+  },
+  supabase: {
+    url: process.env.SUPABASE_URL as string,
+    key: process.env.SUPABASE_KEY as string,
   }
 }
+
+// Connect to supabase
+export const supabase = createClient(config.supabase.url, config.supabase.key)
+console.log('🌴🎄 | Conectado a supabase con la url: ' + config.supabase.url.slice(0, 20) + '...');
 
 app.listen(config.serverConfig.port, () => {
   console.log(`🔌🔦 | Servidor corriendo en el url ${config.serverConfig.url}:${config.serverConfig.port}`);
