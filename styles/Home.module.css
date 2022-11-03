@@ -7,6 +7,14 @@
 
 }
 
+#gradient-canvas {
+  --gradient-color-1: #a960ee;
+  --gradient-color-2: #ff333d;
+  --gradient-color-3: #ff333d;
+  --gradient-color-4: #ffcb57;
+ 
+}
+
 .container {
   padding: 0 7rem;
 }
@@ -35,10 +43,7 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
+
 
 .title a:hover,
 .title a:focus,
@@ -49,7 +54,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 7rem;
   font-style: normal;
   font-family: 'shneextrafett';
   justify-content: left;
@@ -62,6 +67,7 @@
 
 .italic {
   font-style: italic;
+  color: #0070f3;
 }
 
 .description {
