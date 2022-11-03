@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/home", (req, res) => {
-    res.send("Hello World!");
+    res.redirect("https://sketchia.com.mx")
 });
 
 router.get("/*", (req, res) => {

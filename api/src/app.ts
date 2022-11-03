@@ -35,7 +35,7 @@ export const config = {
   }
 }
 
-// Connect to supabase
+
 export const supabase = createClient(config.supabase.url, config.supabase.key)
 console.log('🌴🎄 | Conectado a supabase con la url: ' + config.supabase.url.slice(0, 20) + '...');
 
