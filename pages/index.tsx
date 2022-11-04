@@ -12,16 +12,26 @@ export default function Home() {
         <title>Sketchia</title>
         <meta name="description" content="Empieza a aprender e instruir con sketchia." />
         <link rel="icon" href="/favicon.ico" />
-        
-        
+        <script src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z"></script>
+        <script src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/main.js?t=2022-11-04T17%3A32%3A01.643Z"></script>
       </Head>
+
+      <main className={styles.header}>
+        <div className={styles.header__container}>
+          <div className={styles.header__container__text}>
+            <h1 className={styles.header__container__text__title}>Sketchia</h1>
+            <a href='/' className={styles.header__container__text__description}>Página principal</a>
+            <a href='/login' className={styles.header__container__text__button}>Iniciar sesión</a>
+          </div>
+          <div className='header__container__image'>
+          </div>
+        </div>
+      <canvas className={styles.gradient_canvas} />
+      </main>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-        <script src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js"></script>
-        <script src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/main.js?t=2022-11-03T18%3A32%3A22.335Z"></script>
-          <canvas id="#gradient-canvas"></canvas>
-          Aprende a <br /><span className={styles.italic}>texto variable</span><br /> con Sketchia.
+          Aprende a <br /><span className={styles.italic}></span><br /> con Sketchia.
         </h1>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" />
         <p className={styles.description}>
