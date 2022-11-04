@@ -13,7 +13,6 @@ app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(compression({level: 5}));
-app.use(csurfProtection);
 
 // Routes
 app.use('/v0/users', require('./routes/users.routes.ts'));
