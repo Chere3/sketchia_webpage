@@ -15,7 +15,6 @@
   justify-content: space-between;
   align-items: center;
   min-height: 56px;
-  background-color: transparent;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -24,7 +23,7 @@
 }
 
 .header__container {
-  
+  color: transparent
 }
 
 .consts {
