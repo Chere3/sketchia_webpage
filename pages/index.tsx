@@ -17,16 +17,19 @@ export default function Home() {
       </Head>
 
       <main className={styles.header}>
+      <canvas className={styles.gradient_canvas} />
         <div className={styles.header__container}>
           <div className={styles.header__container__text}>
             <h1 className={styles.header__container__text__title}>Sketchia</h1>
             <a href='/' className={styles.header__container__text__description}>Página principal</a>
+            <a href='/courses' className={styles.header__container__text__description}>Cursos</a>
+            <a href='/blog' className={styles.header__container__text__description}>Blog</a>
             <a href='/login' className={styles.header__container__text__button}>Iniciar sesión</a>
-          </div>
+          </div> 
           <div className='header__container__image'>
           </div>
         </div>
-      <canvas className={styles.gradient_canvas} />
+      
       </main>
 
       <main className={styles.main}>
