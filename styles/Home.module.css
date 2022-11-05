@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+
 @font-face {
   font-family: 'shneextrafett';
   src: url('../public/fonts/sohne-extrafett-webfont.woff2') format('woff2'),
@@ -9,7 +11,7 @@
 
 
 .header__container__text {
-  padding: .5em 1em;
+  padding: .10em -10em;
   display: flex;
   position: absolute;
   justify-content: space-between;
@@ -18,12 +20,34 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 1080px;
+  max-width: 98%;
   /* Separate text from other text*/
+  color: #000000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1em;
 }
 
 .header__container {
-  color: transparent
+  color: transparent;
+  width: 100vh
+}
+
+.header__container__text__pages {
+  margin: 0em 0.6em;
+}
+
+.header__container__text__description {
+  background-color: #ffffff49;
+  padding: .5em 1em;
+  margin: 0em 1em;
+  border-radius: 17px;
+}
+
+.header__container__text__button {
+  background-color: #ffffffc8;
+  padding: .5em 1em;
+  border-radius: 17px;
+  color: #000000;
 }
 
 .consts {
@@ -168,8 +192,7 @@
 }
 
 .logo {
-  height: 1em;
-  margin-left: 0.5rem;
+  left: 1cm;
 }
 
 @media (max-width: 600px) {
@@ -190,4 +213,25 @@
   .logo img {
     filter: invert(1);
   }
+
+  .italic {
+    color: #111;
+    background-color: #0d52a099;
+  }
+
+  .logo {
+    filter: invert(1);
+  }
+
+  .header__container__text {
+    color: #ffffff;
+  }
+
+  .gradient_canvas {
+    --gradient-color-1: #0020b0;
+    --gradient-color-2: #0054b4;
+    --gradient-color-3: #7383cc;
+    --gradient-color-4: #838cb4;
+  }
+
 }

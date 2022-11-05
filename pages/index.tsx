@@ -20,10 +20,14 @@ export default function Home() {
       <canvas className={styles.gradient_canvas} />
         <div className={styles.header__container}>
           <div className={styles.header__container__text}>
-            <h1 className={styles.header__container__text__title}>Sketchia</h1>
+            <Image src="/sketchia.svg" alt="Sketchia logo" className={styles.logo} width={180} height={100} />
+            <div className={styles.header__container__text__pages}>
             <a href='/' className={styles.header__container__text__description}>Página principal</a>
             <a href='/courses' className={styles.header__container__text__description}>Cursos</a>
             <a href='/blog' className={styles.header__container__text__description}>Blog</a>
+            <a href='/about' className={styles.header__container__text__description}>Acerca de nosotros</a>
+            <a href='/source' className={styles.header__container__text__description}>Código fuente</a>
+            </div>
             <a href='/login' className={styles.header__container__text__button}>Iniciar sesión</a>
           </div> 
           <div className='header__container__image'>
