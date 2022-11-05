@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   optimizeFonts: true,
-  distDir: "dist"
+  distDir: "dist",
+  poweredByHeader: false,
 }
 
 module.exports = nextConfig
