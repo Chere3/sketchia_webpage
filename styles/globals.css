@@ -12,12 +12,16 @@ html {
   --layoutWidthMax: 1080px;
   --scrollbarWidth: 30px;
   --windowWidth: calc(100vw - var(--scrollbarWidth));
+  --little_text: #425466;
+  --buttons_padding: .5em 1em;
+  --buttons_border_radius: 10px;
 }
 
 .theme {
   --background: #000;
   --text: #fff;
   --blue-items: #0070f3;
+  
 }
 
 
