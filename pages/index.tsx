@@ -9,11 +9,12 @@ import styles from '../styles/Home.module.css'
 
 
 const extrafett = localFont({src: '../public/fonts/sohne-extrafett-webfont.woff2', variable: '--extrafett', style: 'normal', preload: true });
-const dm_sans = DM_Sans({variable: '--dm_sans', preload: true, weight: "700", style: 'normal'})
+const dm_sans = DM_Sans({variable: '--dm_sans', preload: true, weight: "700", style: 'normal', subsets: ['latin'] });
 
 export default function Home() {
   return (
     <div className={styles.container}>
+
     <Head>
         <title>Sketchia</title>
         <meta name="description" content="Empieza a aprender e instruir con sketchia." />
@@ -21,7 +22,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.header}>
-      <Script src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z" onLoad={
+      <Script src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z"  onLoad={
         () => {
 
           // @ts-ignore
@@ -48,8 +49,8 @@ export default function Home() {
           <div className='header__container__image'>
           </div>
         </div>
-      
       </main>
+      
 
       <main className={styles.main}>
       <Script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" onLoad={
@@ -58,7 +59,7 @@ export default function Home() {
           // @ts-ignore
           var typed = new Typed('.Home_italic___ByUC', {
             // poner cosas para ensaeñar
-            strings: ['Programar', 'Diseñar', 'Cocinar', 'Enseñar', 'Estandarizar', 'Hablar otro idioma', 'Bailar', 'Cantar', 'Llorar', 'Filosofar', 'Pensar', 'Imaginar', 'Querer', 'Amar', 'Ser', 'Vivir', 'Crear esta página web', 'Relajarte de manera rápida', 'Dormir bien', 'Comer rápido', 'Beber de cabeza', 'Jugar de forma profesional', 'Escribir rápido', 'Leer con naturalidad', 'Escuchar', 'Ver', 'Hacer', 'Hablar', 'Pensar', 'Imaginar', 'Querer', 'Amar', 'Ser', 'Vivir', 'Crear esta página web', 'Relajarte', 'Dormir', 'Comer', 'Beber', 'Jugar', 'Escribir', 'Leer', 'Escuchar', 'Ver', 'Hacer', 'Hablar', 'Pensar', 'Imaginar', 'Querer', 'Amar', 'Ser', 'Vivir', 'Crear esta página web', 'Relajarte', 'Dormir', 'Comer', 'Beber', 'Jugar', 'Escribir', 'Leer', 'Escuchar', 'Ver', 'Hacer', 'Hablar', 'Pensar', 'Imaginar', 'Querer', 'Amar', 'Ser', 'Vivir', 'Crear esta página web', 'Relajarte', 'Dormir', 'Comer', 'Beber', 'Jugar', 'Escribir', 'Leer', 'Escuchar', 'Ver', 'Hacer', 'Hablar', 'Pensar', 'Imaginar', 'Querer', 'Amar', 'Ser', 'Vivir', 'Crear esta página web', 'Relajarte', 'Dormir', 'Comer', 'Beber', 'Jugar', 'Escribir', 'Leer', 'Escuchar', 'Ver', 'Hacer', 'Hablar', 'Pensar', 'Imaginar', 'Querer', 'Amar', 'Ser', 'Vivir', 'Crear esta página web', 'Relajarte', 'Dormir', 'Comer', 'Beber', 'Jugar', 'Escribir', 'Leer', 'Escuchar', 'Ver', 'Hacer', 'Hablar', 'Pensar', 'Imaginar', 'Querer', 'Amar', 'Ser', 'Vivir', 'Crear esta página web', 'Relajarte', 'Dormir', 'Comer de forma elegante', 'Quitar el estrés', 'Hacer yoga', 'Escribir rápido en el teclado', 'Leer muy rápido'],
+            strings: ['Programar', 'Diseñar', 'Cocinar', 'Enseñar', 'Estandarizar', 'Hablar otro idioma', 'Bailar', 'Cantar', 'Llorar', 'Hacer bailes para tiktok', 'Controlar tu fuerza', 'Controlar tus sentimientos', 'Ser productivo'],
             typeSpeed: 50,
             backSpeed: 50,
             backDelay: 1000,
@@ -72,33 +73,97 @@ export default function Home() {
         }
 
       } />
-        <h1 className={styles.title}>
+      <div className={styles.title__container}>
+      <h1 className={styles.title}>
           <div className={extrafett.className}>Aprende a <br /><span className={styles.italic}></span><br /> con Sketchia.</div>
-        </h1>
-        <div className={dm_sans.className}>
-        <p className={styles.description}>
-          Todos los días miles de personas de todo México inician<br /> sesión en Sketchia para aprender con las herramientas<br /> más avanzadas hasta el momento.
-        </p>
-        <Link href='/auth' className={styles.title__button__primary}>Comienza ahora</Link>
-        </div>
-        <div className={styles.grid}>
-         
+        </h1>  
+      </div>
+
+      <div className={dm_sans.className}>
+        <p className={styles.description}>Todos los días miles de personas de todo México inician<br /> sesión en Sketchia para aprender con las herramientas<br /> más avanzadas hasta el momento.</p>
+        <Link href='/auth' className={styles.title__button__primary}>Comienza ahora<span className={styles.title__button__primary__arrow} /></Link>
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' Sketchia '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-</div>
-      
-)
-}
+
+      <main className={styles.courses_info}>
+        <div className={styles.courses__info__container}>
+          <div className={styles.courses__info__container__text}>
+            <div className={extrafett.className}><h1 className={styles.courses__info__container__text__title}>Tenemos docenas de<br />cursos para ti</h1></div>
+            <div className={styles.courses__carrousel}>
+              <div className={styles.courses__carrousel__container}>
+                <div className={styles.courses__carrousel__container__card}>
+                  <div className={styles.courses__carrousel__container__card__image}>
+                    <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                    </div>
+                    <div className={styles.courses__carrousel__container__card__text}>
+                      <div className={dm_sans.className}>
+                      <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                      <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
+                      </div>
+                    </div>
+                    <div className={styles.courses__carrousel__container__card}>
+                      <div className={styles.courses__carrousel__container__card__image}>
+                        <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                        </div>
+                        <div className={styles.courses__carrousel__container__card__text}>
+                          <div className={dm_sans.className}>
+                            <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                            <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div className={styles.courses__carrousel__container__card}>
+                              <div className={styles.courses__carrousel__container__card__image}>
+                                <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                                </div>
+                                <div className={styles.courses__carrousel__container__card__text}>
+                                  <div className={dm_sans.className}>
+                                    <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                                    <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div className={styles.courses__carrousel__container__card}>
+                      <div className={styles.courses__carrousel__container__card__image}>
+                        <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                        </div>
+                        <div className={styles.courses__carrousel__container__card__text}>
+                          <div className={dm_sans.className}>
+                            <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                            <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            </div>
+                            </div>
+                            <div className={styles.courses__carrousel__container__card}>
+                      <div className={styles.courses__carrousel__container__card__image}>
+                        <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                        </div>
+                        <div className={styles.courses__carrousel__container__card__text}>
+                          <div className={dm_sans.className}>
+                            <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                            <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div> 
+                            </div>
+                            </div>
+                            </main>
+                            <footer className={styles.footer}>
+                              <a
+                              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >
+                                Powered by{' Sketchia '}
+                                <span className={styles.logo}>
+                                  <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+                                  </span>
+                                  </a>
+                                  </footer>
+                                  </div>      
+                                  )
+                                }
