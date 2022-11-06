@@ -167,7 +167,7 @@
   left: -12vh;
   position: relative;
   align-items: left;
-  height: 810px;
+  height: 976px;
   width: 1902px;
   box-shadow: #0000005c 0px 0px 40px;
 }
@@ -184,8 +184,8 @@
 }
 
 .courses__carrousel {
-  padding: 0rem 5rem 0rem 5rem;
-  padding-top: 39px;
+  padding: 75px 5rem 0rem 5rem;
+  padding-top: 80px;
   max-height: 44rem;
   height: 31rem;
   flex: 1 1;
@@ -215,9 +215,15 @@
   border-color: #0020b0;
   border-radius: 10px;
   background-color: #ffffff;
-  height: 437px;
-  width: 294px;
+  height: 480px;
+  width: 300px;
   box-shadow: #0000001a 0px 0px 4px;
+}
+
+.courses__carrousel__container__card:hover {
+  transform: scale(1.1);
+  transition: all 0.4s ease-in-out;
+  box-shadow: #0000005c 0px 0px 40px;
 }
 
 .courses__carrousel__container__card__text__title {
@@ -236,6 +242,23 @@
   padding-inline: 10px;
   padding-top: 10px;
   border-radius: 100px;
+}
+
+.tools__container__title {
+  position: relative;
+  padding-left: 30rem;
+}
+
+.tools__container {
+  align-content: center;
+  background: #0a2540;
+  left: -12.1vh;
+  position: absolute;
+  align-items: left;
+  height: 350px;
+  width: 1902px;
+  top: 57rem;
+  border-radius: 134% 61% 32% 94%/45% 4% 0% 0%;
 }
 
 .logo {

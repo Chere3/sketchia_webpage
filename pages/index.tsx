@@ -1,5 +1,5 @@
 import localFont from '@next/font/local'
-import { DM_Sans } from '@next/font/google'
+import { DM_Sans, Poppins } from '@next/font/google'
 import { NextScript } from 'next/document'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -9,7 +9,8 @@ import styles from '../styles/Home.module.css'
 
 
 const extrafett = localFont({src: '../public/fonts/sohne-extrafett-webfont.woff2', variable: '--extrafett', style: 'normal', preload: true });
-const dm_sans = DM_Sans({variable: '--dm_sans', preload: true, weight: "700", style: 'normal', subsets: ['latin'] });
+const sovana = localFont({src: '../public/fonts/sovana-regular-webfont.woff2', variable: '--sovana', style: 'normal', preload: true });
+const dm_sans = Poppins({variable: '--dm_sans', preload: true, weight: "600", style: 'normal', subsets: ['latin'] });
 
 export default function Home() {
   return (
@@ -94,7 +95,7 @@ export default function Home() {
               <div className={styles.courses__carrousel__container}>
                 <div className={styles.courses__carrousel__container__card}>
                   <div className={styles.courses__carrousel__container__card__image}>
-                    <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                    <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                     </div>
                     <div className={styles.courses__carrousel__container__card__text}>
                       <div className={dm_sans.className}>
@@ -105,7 +106,7 @@ export default function Home() {
                     </div>
                     <div className={styles.courses__carrousel__container__card}>
                       <div className={styles.courses__carrousel__container__card__image}>
-                        <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                        <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                         </div>
                         <div className={styles.courses__carrousel__container__card__text}>
                           <div className={dm_sans.className}>
@@ -116,7 +117,7 @@ export default function Home() {
                             </div>
                             <div className={styles.courses__carrousel__container__card}>
                               <div className={styles.courses__carrousel__container__card__image}>
-                                <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                                <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                                 </div>
                                 <div className={styles.courses__carrousel__container__card__text}>
                                   <div className={dm_sans.className}>
@@ -127,7 +128,7 @@ export default function Home() {
                             </div>
                             <div className={styles.courses__carrousel__container__card}>
                       <div className={styles.courses__carrousel__container__card__image}>
-                        <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                        <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                         </div>
                         <div className={styles.courses__carrousel__container__card__text}>
                           <div className={dm_sans.className}>
@@ -138,7 +139,7 @@ export default function Home() {
                             </div>
                             <div className={styles.courses__carrousel__container__card}>
                       <div className={styles.courses__carrousel__container__card__image}>
-                        <Image src="/images/image_course.webp" alt="Foto del curso" width={276} height={168} /> 
+                        <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                         </div>
                         <div className={styles.courses__carrousel__container__card__text}>
                           <div className={dm_sans.className}>
@@ -151,6 +152,20 @@ export default function Home() {
                             </div> 
                             </div>
                             </div>
+
+                            <main className={styles.tools}>
+                              <div className={styles.tools__container}>
+                                <div className={styles.tools__container__title}>
+                                    <div className={extrafett.className}>
+                                    <h1 className={styles.tools__container__title__text}>Historias de éxito</h1>
+                                    <div className={styles.tools__container__tacos__history__container}>
+                                      <Image className={styles.tools__container__tacos__history__container__image} src='/images/history_tacos.png' width={100} height={100} alt="Taquero posando junto a un pastor."></Image>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                            </main>
+
                             </main>
                             <footer className={styles.footer}>
                               <a
