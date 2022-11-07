@@ -42,7 +42,7 @@ export default function Home() {
             <Link href='/courses' className={styles.header__container__text__description}>Cursos</Link>
             <Link href='/blog' className={styles.header__container__text__description}>Blog</Link>
             <Link href='/about' className={styles.header__container__text__description}>Acerca de nosotros</Link>
-            <Link href='/source' className={styles.header__container__text__description}>Código fuente</Link>
+            <Link href='https://github.com/chere3/sketchia_proyecto' className={styles.header__container__text__description}>Código fuente</Link>
             </div>
             <Link href='/login' className={styles.header__container__text__button}>Iniciar sesión</Link>
           </div>
@@ -160,14 +160,18 @@ export default function Home() {
                                     <h1 className={styles.tools__container__title__text}>Historias de éxito</h1>
                                     <div className={styles.tools__container__historys}>
                                       <div className={styles.quote}>
-                                        
-                                          <Image src="/images/items/quote.svg" alt='Cita.' width={50} height={50} className={styles.quote__item}></Image>
-                                          <Image src="/images/items/quote-right.svg" alt='Cita.' width={50} height={50} className={styles.quote__item}></Image>
-                                          <div className={dm_sans.className}>
-                                          </div>
                                           <div className={sovana.className}>
+                                          <Image src="/images/reviews_clients/morre.png" alt='Adolescente tomandose una selfie en el baño' width={150} height={150} className={styles.quote__author__image}></Image>
                                           <p className={styles.quote__text}>
-                                            "Gracias a esta plataforma he podido aprender a programar y a crear mi propia página web. Ahora puedo trabajar desde casa y ganar dinero por internet siendo mi propio jefe."
+                                         Gracias a esta plataforma he podido aprender a programar y a crear mi propia página web. Ahora puedo trabajar desde casa y ganar dinero por internet siendo mi propio jefe.
+                                          </p>
+                                          </div>
+                                      </div>
+                                      <div className={styles.quote}>
+                                          <div className={sovana.className}>
+                                          <Image src="/images/reviews_clients/señora.png" alt='Foto de una adolescente mirando a la camara de una forma rarita' width={150} height={150} className={styles.quote__author__image}></Image>
+                                          <p className={styles.quote__text}>
+                                          Sigo sin entender como no pude descubrir esta plataforma antes, desde que la uso ya no puedo dejar de aprender, es bonito luego ver que mis contribuciones son usadas por la marca.
                                           </p>
                                           </div>
                                       </div>
@@ -176,7 +180,23 @@ export default function Home() {
                                     </div>
                                     </div>
                             </main>
-
+                            <main className={styles.join_us}>
+                              <div className={styles.join_us__container}>
+                                <div className={styles.join_us__container__title}>
+                                    <div className={extrafett.className}>
+                                    <h1 className={styles.join_us__container__title__text}>Entonces; ¿qué esperas para unirte?</h1>
+                                    <div className={styles.join_us__container__button}>
+                                      <Link href="/auth/register?as=teacher">
+                                      <h3 className={styles.join_us__container__button__text}>Regístrate como profesor</h3>
+                                      </Link>
+                                      <Link href="/auth/register">
+                                      <h3 className={styles.join_us__container__button__text}>Regístrate como estudiante</h3>
+                                      </Link>
+                                      </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                            </main>
                             </main>
                             <footer className={styles.footer}>
                               <a
