@@ -258,10 +258,10 @@
   left: -12.1vh;
   position: absolute;
   align-items: left;
-  height: 350px;
+  height: 639px;
   width: 1903px;
   top: 57rem;
-  border-radius: 134% 61% 32% 94%/45% 4% 0% 0%;
+  border-radius: 363% 61% 32% 94%/45% 4% 0% 0%;
 }
 
 .quote {
@@ -279,6 +279,8 @@
 .quote__text {
   padding-top: 0rem;
   margin-top: 0rem;
+  padding-left: 0.9rem;
+  padding-right: 11rem;
 }
 
 .logo {
