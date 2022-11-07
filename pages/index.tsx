@@ -187,10 +187,28 @@ export default function Home() {
                                     <h1 className={styles.join_us__container__title__text}>Entonces<br />¿Qué esperas para unirte?</h1>
                                     <div className={styles.join_us__container__button}>
                                       <Link href="/auth/register?as=teacher">
-                                      <h3 className={styles.join_us__container__button__text}>Regístrate como profesor</h3>
+                                        <div className={styles.join_us__container__card}>
+                                          <div className={styles.join_us__container__card__title__container}>
+                                          <h2 className={styles.join_us__container__card__title}>Únete<br/>como profesor</h2>
+                                          <div className={styles.join_us__card__description__container}>
+                                          <p className={styles.join_us__card__description}>Crea tus propios cursos y en el proceso gana dinero.</p>
+                                          </div>
+                                            </div>
+                                        </div>
                                       </Link>
                                       <Link href="/auth/register">
-                                      <h3 className={styles.join_us__container__button__text}>Regístrate como estudiante</h3>
+                                        <div className={styles.join_us__container__card}>
+                                          <div className={styles.join_us__container__card__title__container}>
+                                            <h2 className={styles.join_us__container__card__title}>
+                                              Únete<br />como estudiante
+                                            </h2>
+                                            <div className={styles.join_us__container__card__description__container}>
+                                              <p className={styles.join_us__container__card__description}>
+                                                Únete y recibe acceso a todos nuestros cursos, además de dar con prácticas en su futuro mejoradas.
+                                                </p>
+                                                </div>
+                                          </div>
+                                        </div>
                                       </Link>
                                       </div>
                                     </div>
