@@ -258,7 +258,7 @@
   left: -12.1vh;
   position: absolute;
   align-items: left;
-  height: 887px;
+  height: 689px;
   width: 1903px;
   top: 57rem;
   border-radius: 363% 61% 32% 94%/45% 4% 0% 0%;
@@ -266,10 +266,11 @@
 
 .quote {
   position: relative;
-  margin: 0rem;
-  padding-top: 3.4rem;
-  font-size: 2.6rem;
-  color: #d9e3ed;
+    margin: 0rem;
+    padding-top: 3.4rem;
+    font-size: 2.1rem;
+    color: #d9e3ed;
+    height: 250px;
 }
 
 .quote__item {
@@ -281,11 +282,33 @@
   margin-top: 0rem;
   padding-left: 10.9rem;
   padding-right: 11rem;
-  transform: translateY(-154px);
+  transform: translateY(-167px);
 }
 
 .quote__author__image {
   border-radius: 50%;
+}
+
+.join_us__container {
+  align-content: center;
+  background: #f6f9fc;
+  left: -12.1vh;
+  position: relative;
+  align-items: left;
+  height: 976px;
+  width: 1902px;
+  top: 33rem;
+  border-radius: 642% 61% 32% 94%/45% 4% 0% 0%;
+}
+
+.join_us__container__title {
+  font-style: normal;
+  position: relative;
+  opacity: .9;
+  text-align: center;
+  font-size: 2.7rem;
+  padding-left: 7rem;
+  padding-top: 8rem;
 }
 
 .logo {

@@ -44,7 +44,7 @@ export default function Home() {
             <Link href='/about' className={styles.header__container__text__description}>Acerca de nosotros</Link>
             <Link href='https://github.com/chere3/sketchia_proyecto' className={styles.header__container__text__description}>Código fuente</Link>
             </div>
-            <Link href='/login' className={styles.header__container__text__button}>Iniciar sesión</Link>
+            <Link href='/auth/login' className={styles.header__container__text__button}>Iniciar sesión</Link>
           </div>
           </div> 
           <div className='header__container__image'>
@@ -82,7 +82,7 @@ export default function Home() {
 
       <div className={dm_sans.className}>
         <p className={styles.description}>Todos los días miles de personas de todo México inician<br /> sesión en Sketchia para aprender con las herramientas<br /> más avanzadas hasta el momento.</p>
-        <Link href='/auth' className={styles.title__button__primary}>Comienza ahora<span className={styles.title__button__primary__arrow} /></Link>
+        <Link href='/auth/register' className={styles.title__button__primary}>Comienza ahora<span className={styles.title__button__primary__arrow} /></Link>
         </div>
       </main>
 
@@ -160,7 +160,7 @@ export default function Home() {
                                     <h1 className={styles.tools__container__title__text}>Historias de éxito</h1>
                                     <div className={styles.tools__container__historys}>
                                       <div className={styles.quote}>
-                                          <div className={sovana.className}>
+                                          <div className={dm_sans.className}>
                                           <Image src="/images/reviews_clients/morre.png" alt='Adolescente tomandose una selfie en el baño' width={150} height={150} className={styles.quote__author__image}></Image>
                                           <p className={styles.quote__text}>
                                          Gracias a esta plataforma he podido aprender a programar y a crear mi propia página web. Ahora puedo trabajar desde casa y ganar dinero por internet siendo mi propio jefe.
@@ -168,7 +168,7 @@ export default function Home() {
                                           </div>
                                       </div>
                                       <div className={styles.quote}>
-                                          <div className={sovana.className}>
+                                          <div className={dm_sans.className}>
                                           <Image src="/images/reviews_clients/señora.png" alt='Foto de una adolescente mirando a la camara de una forma rarita' width={150} height={150} className={styles.quote__author__image}></Image>
                                           <p className={styles.quote__text}>
                                           Sigo sin entender como no pude descubrir esta plataforma antes, desde que la uso ya no puedo dejar de aprender, es bonito luego ver que mis contribuciones son usadas por la marca.
@@ -184,7 +184,7 @@ export default function Home() {
                               <div className={styles.join_us__container}>
                                 <div className={styles.join_us__container__title}>
                                     <div className={extrafett.className}>
-                                    <h1 className={styles.join_us__container__title__text}>Entonces; ¿qué esperas para unirte?</h1>
+                                    <h1 className={styles.join_us__container__title__text}>Entonces<br />¿Qué esperas para unirte?</h1>
                                     <div className={styles.join_us__container__button}>
                                       <Link href="/auth/register?as=teacher">
                                       <h3 className={styles.join_us__container__button__text}>Regístrate como profesor</h3>
