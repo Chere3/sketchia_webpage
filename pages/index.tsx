@@ -158,8 +158,16 @@ export default function Home() {
                                 <div className={styles.tools__container__title}>
                                     <div className={extrafett.className}>
                                     <h1 className={styles.tools__container__title__text}>Historias de éxito</h1>
-                                    <div className={styles.tools__container__tacos__history__container}>
-                                      <Image className={styles.tools__container__tacos__history__container__image} src='/images/history_tacos.png' width={100} height={100} alt="Taquero posando junto a un pastor."></Image>
+                                    <div className={styles.tools__container__historys}>
+                                      <div className={styles.quote}>
+                                        <div className={sovana.className}>
+                                          <Image src="/images/items/quote.svg" alt='Cita.' width={50} height={50} className={styles.quote__item}></Image>
+                                          <Image src="/images/items/quote-right.svg" alt='Cita.' width={50} height={50} className={styles.quote__item}></Image>
+                                          <p className={styles.quote__text}>
+                                            "Gracias a esta plataforma he podido aprender a programar y a crear mi propia página web. Ahora puedo trabajar desde casa y ganar dinero por internet siendo mi propio jefe."
+                                          </p>
+                                          </div>
+                                      </div>
                                     </div>
                                     </div>
                                     </div>

@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   optimizeFonts: true,
   distDir: "dist",
-  poweredByHeader: false
+  poweredByHeader: false,
 }
 
 module.exports = nextConfig
