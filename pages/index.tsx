@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.header}>
-      <Script src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z"  onLoad={
+      <Script src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z" strategy='afterInteractive'  onLoad={
         () => {
 
           // @ts-ignore
@@ -82,7 +82,7 @@ export default function Home() {
 
       <div className={dm_sans.className}>
         <p className={styles.description}>Todos los días miles de personas de todo México inician<br /> sesión en Sketchia para aprender con las herramientas<br /> más avanzadas hasta el momento.</p>
-        <Link href='/auth/register' className={styles.title__button__primary}>Comienza ahora<span className={styles.title__button__primary__arrow} /></Link>
+        <Link href='/auth/register' className={styles.title__button__primary}>Comienza ahora</Link>
         </div>
       </main>
 
@@ -180,37 +180,19 @@ export default function Home() {
                                     </div>
                                     </div>
                             </main>
+
+
                             <main className={styles.join_us}>
                               <div className={styles.join_us__container}>
                                 <div className={styles.join_us__container__title}>
                                     <div className={extrafett.className}>
-                                    <h1 className={styles.join_us__container__title__text}>Entonces<br />¿Qué esperas para unirte?</h1>
-                                    <div className={styles.join_us__container__button}>
-                                      <Link href="/auth/register?as=teacher">
-                                        <div className={styles.join_us__container__card}>
-                                          <div className={styles.join_us__container__card__title__container}>
-                                          <h2 className={styles.join_us__container__card__title}>Únete<br/>como profesor</h2>
-                                          <div className={styles.join_us__card__description__container}>
-                                          <p className={styles.join_us__card__description}>Crea tus propios cursos y en el proceso gana dinero.</p>
-                                          </div>
-                                            </div>
-                                        </div>
-                                      </Link>
-                                      <Link href="/auth/register">
-                                        <div className={styles.join_us__container__card}>
-                                          <div className={styles.join_us__container__card__title__container}>
-                                            <h2 className={styles.join_us__container__card__title}>
-                                              Únete<br />como estudiante
-                                            </h2>
-                                            <div className={styles.join_us__container__card__description__container}>
-                                              <p className={styles.join_us__container__card__description}>
-                                                Únete y recibe acceso a todos nuestros cursos, además de dar con prácticas en su futuro mejoradas.
-                                                </p>
-                                                </div>
-                                          </div>
-                                        </div>
-                                      </Link>
-                                      </div>
+                                    <h1 className={styles.join_us__container__title__text}>Entonces, <br />¿Qué esperas para unirte?</h1>
+                                    <div className={styles.join_us__container__buttons}>
+                                      <div className={dm_sans.className}>
+                                    <Link href='/auth/register' className={styles.join_us__container__button}>Únete como estudiante</Link> 
+                                    <Link href='/auth/register?as=teacher' className={styles.join_us__container__button}>Únete como profesor</Link>
+                                    </div>
+                                    </div>
                                     </div>
                                     </div>
                                     </div>
