@@ -295,7 +295,7 @@
   left: -12.1vh;
   position: relative;
   align-items: left;
-  height: 976px;
+  height: 800px;
   width: 1902px;
   top: 33rem;
   border-radius: 642% 61% 32% 94%/45% 4% 0% 0%;
@@ -322,6 +322,25 @@
   color: #ffffff;
   padding: var(--buttons_padding);
   border-radius: var(--buttons_border_radius);
+}
+
+.footer__container {
+  background: #0a2540;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__container__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 0rem 0rem 0rem;
 }
 
 .logo {

@@ -44,6 +44,20 @@ export default function Home() {
         })(window, document, "clarity", "script", "ehcxoxhdt0");`,
         }}
       />
+
+      <Script strategy='afterInteractive' src="https://www.googletagmanager.com/gtag/js?id=G-WB48WCP5H0" onLoad={
+        () => {
+          // @ts-ignore
+          window.dataLayer = window.dataLayer || [];
+          // @ts-ignore
+          function gtag(){dataLayer.push(arguments);}
+          // @ts-ignore
+          gtag('js', new Date());
+
+          // @ts-ignore
+          gtag('config', 'G-WB48WCP5H0');
+        }
+      }></Script>
       <canvas className={styles.gradient_canvas} />
         <div className={styles.header__container}>
           <div className={dm_sans.className}>
@@ -212,7 +226,7 @@ export default function Home() {
                             <footer className={styles.footer}>
                               <div className={styles.footer__container}>
                                 <div className={styles.footer__container__logo}>
-                                  <Image src="/sketchia.svg" alt="Logo de la plataforma" width={200} height={200} />
+                                  <Image src="/sketchia.svg" alt="Logo de la plataforma" width={200} height={100} />
                                   </div>
                                   <div className={styles.footer__container__links}>
                                     <div className={dm_sans.className}>
