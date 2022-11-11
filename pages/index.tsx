@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import styles from '../styles/Home.module.css'
 import footerStyles from '../styles/home/footer.module.css'
+import headerStyles from '../styles/home/header.module.css'
 
 
 const extrafett = localFont({src: '../public/fonts/sohne-extrafett-webfont.woff2', variable: '--extrafett', style: 'normal', preload: true });
@@ -60,18 +61,18 @@ export default function Home() {
         }
       }></Script>
       <canvas className={styles.gradient_canvas} />
-        <div className={styles.header__container}>
+        <div className={headerStyles.header__container}>
           <div className={dm_sans.className}>
-          <div className={styles.header__container__text}>
+          <div className={headerStyles.header__container__text}>
             <Image src="/sketchia.svg" alt="Sketchia logo" className={styles.logo} width={180} height={100} />
-            <div className={styles.header__container__text__pages}>
-            <Link href='/' className={styles.header__container__text__description}>Página principal</Link>
-            <Link href='/courses' className={styles.header__container__text__description}>Cursos</Link>
-            <Link href='/blog' className={styles.header__container__text__description}>Blog</Link>
-            <Link href='/about' className={styles.header__container__text__description}>Acerca de nosotros</Link>
-            <Link href='https://github.com/chere3/sketchia_proyecto' className={styles.header__container__text__description}>Código fuente</Link>
+            <div className={headerStyles.header__container__text__pages}>
+            <Link href='/' className={headerStyles.header__container__text__description}>Página principal</Link>
+            <Link href='/courses' className={headerStyles.header__container__text__description}>Cursos</Link>
+            <Link href='/blog' className={headerStyles.header__container__text__description}>Blog</Link>
+            <Link href='/about' className={headerStyles.header__container__text__description}>Acerca de nosotros</Link>
+            <Link href='https://github.com/chere3/sketchia_proyecto' className={headerStyles.header__container__text__description}>Código fuente</Link>
             </div>
-            <Link href='/auth/login' className={styles.header__container__text__button}>Iniciar sesión</Link>
+            <Link href='/auth/login' className={headerStyles.header__container__text__button}>Iniciar sesión</Link>
           </div>
           </div> 
           <div className='header__container__image'>
