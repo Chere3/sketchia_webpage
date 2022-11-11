@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import styles from '../styles/Home.module.css'
+import footerStyles from '../styles/home/footer.module.css'
 
 
 const extrafett = localFont({src: '../public/fonts/sohne-extrafett-webfont.woff2', variable: '--extrafett', style: 'normal', preload: true });
@@ -223,17 +224,29 @@ export default function Home() {
                                     </div>
                                     </div>
                             </main>
-                            <footer className={styles.footer}>
-                              <div className={styles.footer__container}>
-                                <div className={styles.footer__container__logo}>
-                                  <Image src="/sketchia.svg" alt="Logo de la plataforma" width={200} height={100} />
+
+                            <footer className={footerStyles.footer}>
+                              <div className={footerStyles.footer__container}>
+                                <div className={footerStyles.footer__container__logo}>
+                                  <Image className={footerStyles.footer__logo} src="/sketchia.svg" alt="Logo de la plataforma" width={200} height={100} />
                                   </div>
-                                  <div className={styles.footer__container__links}>
+                                  <div className={footerStyles.footer__container__links}>
                                     <div className={dm_sans.className}>
-                                    <Link href='/about' className={styles.footer__container__link}>Acerca de</Link>
-                                    <Link href='/terms' className={styles.footer__container__link}>Términos y condiciones</Link>
-                                    <Link href='/privacy' className={styles.footer__container__link}>Política de privacidad</Link>
+                                    <Link href='/about' className={footerStyles.footer__container__link}>Acerca de</Link>
+                                    <Link href='/legal/privacy' className={footerStyles.footer__container__link}>Privacidad</Link>
                                     </div>
+                                    </div>
+                                    <div className={footerStyles.footer__container__links}>
+                                      <div className={dm_sans.className}>
+                                      <Link href='/legal/cookies' className={footerStyles.footer__container__link}>Cookies</Link>
+                                      <Link href='/legal/terms' className={footerStyles.footer__container__link}>Términos</Link>
+                                    </div>
+                                    <div className={footerStyles.footer__container__links}>
+                                      <div className={dm_sans.className}>
+                                      <Link href='/courses' className={footerStyles.footer__container__link}>Cursos</Link>
+                                      <Link href='/contact' className={footerStyles.footer__container__link}>Contacto</Link>
+                                      </div>
+                                      </div>
                                     </div>
                                     </div>
                                     </footer>
