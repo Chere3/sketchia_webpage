@@ -32,6 +32,18 @@ export default function Home() {
           console.log('Iniciado gradiente.');
         }
       }></Script>
+      <Script
+        id="a"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ehcxoxhdt0");`,
+        }}
+      />
       <canvas className={styles.gradient_canvas} />
         <div className={styles.header__container}>
           <div className={dm_sans.className}>
@@ -197,19 +209,21 @@ export default function Home() {
                                     </div>
                                     </div>
                             </main>
-                            </main>
                             <footer className={styles.footer}>
-                              <a
-                              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              >
-                                Powered by{' Sketchia '}
-                                <span className={styles.logo}>
-                                  <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-                                  </span>
-                                  </a>
-                                  </footer>
-                                  </div>      
+                              <div className={styles.footer__container}>
+                                <div className={styles.footer__container__logo}>
+                                  <Image src="/sketchia.svg" alt="Logo de la plataforma" width={200} height={200} />
+                                  </div>
+                                  <div className={styles.footer__container__links}>
+                                    <div className={dm_sans.className}>
+                                    <Link href='/about' className={styles.footer__container__link}>Acerca de</Link>
+                                    <Link href='/terms' className={styles.footer__container__link}>Términos y condiciones</Link>
+                                    <Link href='/privacy' className={styles.footer__container__link}>Política de privacidad</Link>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </footer>
+                            </main>
+                                    </div>
                                   )
                                 }
