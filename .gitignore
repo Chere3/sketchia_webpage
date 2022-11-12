@@ -1,4 +1,7 @@
+http-server
 node_modules
 .env
 .next
 dist
+sketchia.conf
+yarn-error.log

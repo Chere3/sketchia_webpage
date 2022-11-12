@@ -1,13 +1,15 @@
 import localFont from '@next/font/local'
-import { DM_Sans, Poppins } from '@next/font/google'
-import { NextScript } from 'next/document'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import Script from 'next/script'
-import styles from '../styles/Home.module.css'
-import footerStyles from '../styles/home/footer.module.css'
-import headerStyles from '../styles/home/header.module.css'
+import { Poppins } from '@next/font/google'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import Script from 'next/script';
+import styles from '../styles/Home.module.css';
+import footerStyles from '../styles/home/footer.module.css';
+import headerStyles from '../styles/home/header.module.css';
+import coursesStyles from '../styles/home/courses.module.css';
+import quotesStyles from '../styles/home/quotes.module.css';
+import join_usStyles from '../styles/home/join_us.module.css';
 
 
 const extrafett = localFont({src: '../public/fonts/sohne-extrafett-webfont.woff2', variable: '--extrafett', style: 'normal', preload: true });
@@ -115,64 +117,64 @@ export default function Home() {
       </main>
 
 
-      <main className={styles.courses_info}>
-        <div className={styles.courses__info__container}>
-          <div className={styles.courses__info__container__text}>
-            <div className={extrafett.className}><h1 className={styles.courses__info__container__text__title}>Tenemos docenas de<br />cursos para ti</h1></div>
-            <div className={styles.courses__carrousel}>
-              <div className={styles.courses__carrousel__container}>
-                <div className={styles.courses__carrousel__container__card}>
-                  <div className={styles.courses__carrousel__container__card__image}>
+      <main className={coursesStyles.courses_info}>
+        <div className={coursesStyles.courses__info__container}>
+          <div className={coursesStyles.courses__info__container__text}>
+            <div className={extrafett.className}><h1 className={coursesStyles.courses__info__container__text__title}>Tenemos docenas de<br />cursos para ti</h1></div>
+            <div className={coursesStyles.courses__carrousel}>
+              <div className={coursesStyles.courses__carrousel__container}>
+                <div className={coursesStyles.courses__carrousel__container__card}>
+                  <div className={coursesStyles.courses__carrousel__container__card__image}>
                     <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                     </div>
-                    <div className={styles.courses__carrousel__container__card__text}>
+                    <div className={coursesStyles.courses__carrousel__container__card__text}>
                       <div className={dm_sans.className}>
-                      <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
-                      <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <h1 className={coursesStyles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                      <p className={coursesStyles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                       </div>
                       </div>
                     </div>
-                    <div className={styles.courses__carrousel__container__card}>
-                      <div className={styles.courses__carrousel__container__card__image}>
+                    <div className={coursesStyles.courses__carrousel__container__card}>
+                      <div className={coursesStyles.courses__carrousel__container__card__image}>
                         <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                         </div>
-                        <div className={styles.courses__carrousel__container__card__text}>
+                        <div className={coursesStyles.courses__carrousel__container__card__text}>
                           <div className={dm_sans.className}>
-                            <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
-                            <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h1 className={coursesStyles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                            <p className={coursesStyles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
                             </div>
                             </div>
-                            <div className={styles.courses__carrousel__container__card}>
-                              <div className={styles.courses__carrousel__container__card__image}>
+                            <div className={coursesStyles.courses__carrousel__container__card}>
+                              <div className={coursesStyles.courses__carrousel__container__card__image}>
                                 <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                                 </div>
-                                <div className={styles.courses__carrousel__container__card__text}>
+                                <div className={coursesStyles.courses__carrousel__container__card__text}>
                                   <div className={dm_sans.className}>
-                                    <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
-                                    <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <h1 className={coursesStyles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                                    <p className={coursesStyles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
                             </div>
                             </div>
-                            <div className={styles.courses__carrousel__container__card}>
-                      <div className={styles.courses__carrousel__container__card__image}>
+                            <div className={coursesStyles.courses__carrousel__container__card}>
+                      <div className={coursesStyles.courses__carrousel__container__card__image}>
                         <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                         </div>
-                        <div className={styles.courses__carrousel__container__card__text}>
+                        <div className={coursesStyles.courses__carrousel__container__card__text}>
                           <div className={dm_sans.className}>
-                            <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
-                            <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h1 className={coursesStyles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                            <p className={coursesStyles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
                             </div>
                             </div>
-                            <div className={styles.courses__carrousel__container__card}>
-                      <div className={styles.courses__carrousel__container__card__image}>
+                            <div className={coursesStyles.courses__carrousel__container__card}>
+                      <div className={coursesStyles.courses__carrousel__container__card__image}>
                         <Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} /> 
                         </div>
-                        <div className={styles.courses__carrousel__container__card__text}>
+                        <div className={coursesStyles.courses__carrousel__container__card__text}>
                           <div className={dm_sans.className}>
-                            <h1 className={styles.courses__carrousel__container__card__text__title}>Curso #1</h1>
-                            <p className={styles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h1 className={coursesStyles.courses__carrousel__container__card__text__title}>Curso #1</h1>
+                            <p className={coursesStyles.courses__carrousel__container__card__text__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
                             </div>
                             </div>
@@ -181,24 +183,24 @@ export default function Home() {
                             </div>
                             </div>
 
-                            <main className={styles.tools}>
-                              <div className={styles.tools__container}>
-                                <div className={styles.tools__container__title}>
+                            <main className={quotesStyles.tools}>
+                              <div className={quotesStyles.tools__container}>
+                                <div className={quotesStyles.tools__container__title}>
                                     <div className={extrafett.className}>
-                                    <h1 className={styles.tools__container__title__text}>Historias de éxito</h1>
-                                    <div className={styles.tools__container__historys}>
-                                      <div className={styles.quote}>
+                                    <h1 className={quotesStyles.tools__container__title__text}>Historias de éxito</h1>
+                                    <div className={quotesStyles.tools__container__historys}>
+                                      <div className={quotesStyles.quote}>
                                           <div className={dm_sans.className}>
-                                          <Image src="/images/reviews_clients/morre.png" alt='Adolescente tomandose una selfie en el baño' width={150} height={150} className={styles.quote__author__image}></Image>
-                                          <p className={styles.quote__text}>
+                                          <Image src="/images/reviews_clients/morre.png" alt='Adolescente tomandose una selfie en el baño' width={150} height={150} className={quotesStyles.quote__author__image}></Image>
+                                          <p className={quotesStyles.quote__text}>
                                          Gracias a esta plataforma he podido aprender a programar y a crear mi propia página web. Ahora puedo trabajar desde casa y ganar dinero por internet siendo mi propio jefe.
                                           </p>
                                           </div>
                                       </div>
-                                      <div className={styles.quote}>
+                                      <div className={quotesStyles.quote}>
                                           <div className={dm_sans.className}>
-                                          <Image src="/images/reviews_clients/señora.png" alt='Foto de una adolescente mirando a la camara de una forma rarita' width={150} height={150} className={styles.quote__author__image}></Image>
-                                          <p className={styles.quote__text}>
+                                          <Image src="/images/reviews_clients/señora.png" alt='Foto de una adolescente mirando a la camara de una forma rarita' width={150} height={150} className={quotesStyles.quote__author__image}></Image>
+                                          <p className={quotesStyles.quote__text}>
                                           Sigo sin entender como no pude descubrir esta plataforma antes, desde que la uso ya no puedo dejar de aprender, es bonito luego ver que mis contribuciones son usadas por la marca.
                                           </p>
                                           </div>
@@ -210,15 +212,15 @@ export default function Home() {
                             </main>
 
 
-                            <main className={styles.join_us}>
-                              <div className={styles.join_us__container}>
-                                <div className={styles.join_us__container__title}>
+                            <main className={join_usStyles.join_us}>
+                              <div className={join_usStyles.join_us__container}>
+                                <div className={join_usStyles.join_us__container__title}>
                                     <div className={extrafett.className}>
-                                    <h1 className={styles.join_us__container__title__text}>Entonces, <br />¿Qué esperas para unirte?</h1>
-                                    <div className={styles.join_us__container__buttons}>
+                                    <h1 className={join_usStyles.join_us__container__title__text}>Entonces, <br />¿Qué esperas para unirte?</h1>
+                                    <div className={join_usStyles.join_us__container__buttons}>
                                       <div className={dm_sans.className}>
-                                    <Link href='/auth/register' className={styles.join_us__container__button}>Únete como estudiante</Link> 
-                                    <Link href='/auth/register?as=teacher' className={styles.join_us__container__button}>Únete como profesor</Link>
+                                    <Link href='/auth/register' className={join_usStyles.join_us__container__button}>Únete como estudiante</Link> 
+                                    <Link href='/auth/register?as=teacher' className={join_usStyles.join_us__container__button}>Únete como profesor</Link>
                                     </div>
                                     </div>
                                     </div>

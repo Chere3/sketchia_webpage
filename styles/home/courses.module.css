@@ -1,0 +1,92 @@
+.courses_info {
+    min-height: 100vh;
+    padding: 9rem 0;
+    padding-top: 22px;
+    flex: 1 1;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .courses__info__container {
+    align-content: center;
+    background: #f6f9fc;
+    left: -12vh;
+    position: relative;
+    align-items: left;
+    height: 976px;
+    width: 1902px;
+    box-shadow: #0000005c 0px 0px 40px;
+  }
+  
+  .courses__info__container__text__title {
+    font-style: normal;
+    top: 0rem;
+    position: relative;
+    opacity: .9;
+    text-align: center;
+    font-size: 5rem;
+    padding-left: 7rem;
+    padding-top: 6rem;
+  }
+  
+  .courses__carrousel {
+    padding: 75px 5rem 0rem 5rem;
+    padding-top: 80px;
+    max-height: 44rem;
+    height: 35.2rem;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .courses__carrousel__container {
+    margin-inline: -0.7rem;
+      padding: 0rem 0rem 0 0rem;
+      height: 483px;
+      display: flex;
+      position: absolute;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 87%;
+      color: #000000;
+      font-size: 1.1em;
+  }
+  
+  .courses__carrousel__container__card {
+    border-color: #0020b0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 480px;
+    width: 300px;
+    box-shadow: #0000001a 0px 0px 4px;
+  }
+  
+  .courses__carrousel__container__card:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+    box-shadow: #0000005c 0px 0px 40px;
+  }
+  
+  .courses__carrousel__container__card__text__title {
+    color: #2d52fdde;
+  }
+  
+  .courses__carrousel__container__card__text__description {
+    margin-top: 2px;
+  }
+  
+  .courses__carrousel__container__card__text__title, .courses__carrousel__container__card__text__description {
+    padding: 0rem 0.8rem 0rem 0.8rem;
+  }
+  
+  .courses__carrousel__container__card__image {
+    padding-inline: 10px;
+    padding-top: 10px;
+    border-radius: 100px;
+  }
+  
