@@ -146,7 +146,7 @@ export default function Home() {
           src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"
           onLoad={() => {
             // @ts-ignore
-            var typed = new Typed(".Home_italic___ByUC", {
+            var typed = new Typed(".title_italic__a98OH", {
               // poner cosas para ensaeñar
               strings: [
                 "Programar",

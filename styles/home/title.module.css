@@ -1,19 +1,15 @@
-.typed-cursor {
-    color: #ffffff;
-  }
-  
+
   .gradient_canvas {
-    --gradient-color-1: #4663e8;
-    --gradient-color-2: #0070f3;
-    --gradient-color-3: #8497f0;
-    --gradient-color-4: #bac5f8;
-    --offSetX: var(--gutterWidth);
+    --gradient-color-1: var(--def-gradient-color-1);
+    --gradient-color-2: var(--def-gradient-color-2);
+    --gradient-color-3: var(--def-gradient-color-3);
+    --gradient-color-4: var(--def-gradient-color-4);
     border-radius: 0% 0% 1% 100%/0% 0% 0% 100%;
     right: 0.00001vh;
     position: absolute;
     align-items: left;
     height: 600px;
-    width: calc(140.86vw - var(--scrollbarWidth));
+    width: calc(var(--windowQuit) - var(--scrollbarWidth));
   }
 
   .container {
@@ -54,12 +50,9 @@
   }
   
   .italic {
-    font-style: italic;
-    color: #ffffff;
-    border-radius: 10px;
-    background-color: #0071f357;
+    color: var(--resalted-text-color);
+    background-color: var(--resalted-background-color);
     text-align: center;
-    border-radius: 10px;
   }
   
   
@@ -73,8 +66,8 @@
   }
   
   .title__button__primary {
-    background-color: #2d52fdde;
-    color: #ffffff;
+    background-color: var(--button-color);
+    color: var(--resalted-text-color);
     padding: var(--buttons_padding);
     border-radius: var(--buttons_border_radius);
     position: relative;

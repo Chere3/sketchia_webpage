@@ -7,12 +7,6 @@
   opacity: 1;
 }
 
-
-
-.logo {
-  left: 1cm;
-}
-
 @media (max-width: 600px) {
   .grid {
     width: 100%;

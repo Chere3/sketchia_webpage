@@ -9,12 +9,30 @@ body {
 }
 
 html {
+  /* Def sizes */
   --layoutWidthMax: 1080px;
   --scrollbarWidth: 30px;
   --windowWidth: calc(100vw - var(--scrollbarWidth));
-  --little_text: #425466;
+  --windowQuit: 140.86vw;
+
   --buttons_padding: .5em 1em;
   --buttons_border_radius: 10px;
+
+
+
+  /* Def colors */
+  --def-gradient-color-1: #4663e8;
+  --def-gradient-color-2: #0070f3;
+  --def-gradient-color-3: #8497f0;
+  --def-gradient-color-4: #bac5f8;
+  
+  --resalted-text-color: #ffffff;
+  --little_text: #425466;
+  --resalted-background-color: #0071f357;
+
+  --button-color: #2d52fdde;
+  --button-color-hover: #0070f3;
+
 }
 
 .theme {
@@ -27,9 +45,9 @@ html {
 
 a:hover {
   transition: all 0.4s ease-in-out;
-  background-color: #0070f3;
+  background-color: var(--button-color-hover);
   color: #fff;
-  box-shadow: 0 0 30px #0070f3, 0 0 50px #0070f3, 0 0 90px #0070f3;
+  box-shadow: 0 0 30px var(--button-color-hover), 0 0 50px var(--button-color-hover), 0 0 90px var(--button-color-hover);
 }
 
 
