@@ -7,31 +7,30 @@ import Link from "next/link";
 import { Poppins } from "@next/font/google";
 
 const extrafett = localFont({
-    src: '../public/fonts/sohne-extrafett-webfont.woff2',
-    variable: '--extrafett',
-    style: 'normal',
-    preload: true,
+  src: "../public/fonts/sohne-extrafett-webfont.woff2",
+  variable: "--extrafett",
+  style: "normal",
+  preload: true,
 });
 
 const poppins = Poppins({
-    variable: "--dm_sans",
-    preload: true,
-    weight: "600",
-    style: "normal",
-    subsets: ["latin"],
-  });
-
+  variable: "--dm_sans",
+  preload: true,
+  weight: "600",
+  style: "normal",
+  subsets: ["latin"],
+});
 
 export default function Custom404() {
-    return (
+  return (
     <div>
-       <Head>
+      <Head>
         <title>No encontrado.</title>
         <meta name="description" content="Contenido no encontrado" />
-       </Head>
+      </Head>
 
-       <main className={headerStyles.header}>
-       <Script
+      <main className={headerStyles.header}>
+        <Script
           id="a"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -62,21 +61,19 @@ export default function Custom404() {
             gtag("config", "G-WB48WCP5H0");
           }}
         ></Script>
-       </main>
+      </main>
 
-       <main className={Styles.main}>
+      <main className={Styles.main}>
         <div className={extrafett.className}>
-        <h1 className={Styles.main__title}>404</h1>
+          <h1 className={Styles.main__title}>404</h1>
         </div>
         <div className={poppins.className}>
-        <h5>Al parecer lo que estas buscando no lo hemos encontrado.</h5>
-        <Link href="/" className={Styles.main__button}>
-        Volver a la página de inicio.
-        </Link>
+          <h5>Al parecer lo que estas buscando no lo hemos encontrado.</h5>
+          <Link href="/" className={Styles.main__button}>
+            Volver a la página de inicio.
+          </Link>
         </div>
-       </main>
-       </div>
-    );
+      </main>
+    </div>
+  );
 }
-
-

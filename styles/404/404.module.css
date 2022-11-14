@@ -24,7 +24,7 @@
 
 .main__button {
     background-color: var(--button-color);
-    color: var(--button-text-color);
+    color: var(--resalted-text-color);
     font-size: 1.6rem;
     padding: var(--buttons_padding);
     border-radius: 2.6rem;
