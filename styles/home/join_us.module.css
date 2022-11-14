@@ -1,11 +1,11 @@
 .join_us__container {
     align-content: center;
-    background: #f6f9fc;
+    background: var(--courses-background-color);
     left: -12.1vh;
     position: relative;
     align-items: left;
     height: 800px;
-    width: 1902px;
+    width: calc(100.7vw - var(--scrollbarWidth));
     top: 33rem;
     border-radius: 642% 61% 32% 94%/45% 4% 0% 0%;
   }

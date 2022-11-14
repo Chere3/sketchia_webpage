@@ -13,7 +13,7 @@
     position: absolute;
     align-items: left;
     height: 689px;
-    width: 1903px;
+    width: calc(100.7vw - var(--scrollbarWidth));
     top: 57rem;
     border-radius: 363% 61% 32% 94%/45% 4% 0% 0%;
   }
@@ -22,9 +22,9 @@
     position: relative;
       margin: 0rem;
       padding-top: 3.4rem;
-      font-size: 2.1rem;
+      font-size: calc(3.2rem - var(--scrollbarWidth));
       color: #d9e3ed;
-      height: 250px;
+      width: calc(86.6vw - var(--scrollbarWidth));
   }
   
   .quote__item {
@@ -36,9 +36,11 @@
     margin-top: 0rem;
     padding-left: 10.9rem;
     padding-right: 11rem;
-    transform: translateY(-167px);
+    transform: translateY(calc(-5.9rem - var(--scrollbarWidth)));
   }
   
   .quote__author__image {
     border-radius: 50%;
+    width: calc(11rem - var(--scrollbarWidth));
+    height: calc(10rem - var(--scrollbarWidth));
   }

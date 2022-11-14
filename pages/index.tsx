@@ -47,7 +47,7 @@ export default function Home() {
       <main className={headerStyles.header}>
         <Script
           src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           onLoad={() => {
             // @ts-ignore
             var gradient = new Gradient();
@@ -226,7 +226,7 @@ export default function Home() {
                       src="/images/not_image_image.png"
                       alt="Foto del curso"
                       width={276}
-                      height={168}
+                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
                     />
                   </div>
                   <div
@@ -268,7 +268,7 @@ export default function Home() {
                       src="/images/not_image_image.png"
                       alt="Foto del curso"
                       width={276}
-                      height={168}
+                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
                     />
                   </div>
                   <div
@@ -310,7 +310,7 @@ export default function Home() {
                       src="/images/not_image_image.png"
                       alt="Foto del curso"
                       width={276}
-                      height={168}
+                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
                     />
                   </div>
                   <div
@@ -352,7 +352,7 @@ export default function Home() {
                       src="/images/not_image_image.png"
                       alt="Foto del curso"
                       width={276}
-                      height={168}
+                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
                     />
                   </div>
                   <div
@@ -394,7 +394,7 @@ export default function Home() {
                       src="/images/not_image_image.png"
                       alt="Foto del curso"
                       width={276}
-                      height={168}
+                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
                     />
                   </div>
                   <div
@@ -523,7 +523,7 @@ export default function Home() {
                   href="/about"
                   className={footerStyles.footer__container__link}
                 >
-                  Acerca de
+                  Información
                 </Link>
                 <Link
                   href="/legal/privacy"

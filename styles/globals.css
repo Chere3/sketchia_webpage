@@ -4,6 +4,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  color: var(--body-color);
+  background-color: var(--background-color);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -12,7 +14,7 @@ html {
   /* Def sizes */
   --layoutWidthMax: 1080px;
   --scrollbarWidth: 30px;
-  --windowWidth: calc(100vw - var(--scrollbarWidth));
+  
   --windowQuit: 140.86vw;
 
   --buttons_padding: .5em 1em;
@@ -20,7 +22,18 @@ html {
 
 
 
-  /* Def colors */
+  /* Home def colors */
+
+  --body-color: #000000;
+  --background-color: #ffff;
+
+
+  --header-button-color: #ffffff49;
+  --header-text-button-color: #000000;
+  --login-button-hover-color: #0027c3;
+  --login-button-color: #ffffffc8;
+  --login-button-shadow-hover: #022dda;
+
   --def-gradient-color-1: #4663e8;
   --def-gradient-color-2: #0070f3;
   --def-gradient-color-3: #8497f0;
@@ -28,25 +41,29 @@ html {
   
   --resalted-text-color: #ffffff;
   --little_text: #425466;
-  --resalted-background-color: #0071f357;
+  --resalted-background-color: #0077ff57;
 
-  --button-color: #2d52fdde;
-  --button-color-hover: #0070f3;
+  --button-color: #0071f3c7;
+  --button-color-hover: #4da0ff;
 
-}
+  --courses-background-color: #f6f9fc;
+  --courses-box-shadow: #0000005c 0px 0px 40px;
+  --courses-carrousel-text-color: #000000;
 
-.theme {
-  --background: #000;
-  --text: #fff;
-  --blue-items: #0070f3;
-  
+  --courses-card-border-color: #0020b0;
+  --courses-card-background-color: #ffffff;
+  --courses-card-box-shadow: #0000001a 0px 0px 4px;
+  --courses-card-box-shadow-hover: #0000005c 0px 0px 40px;
+  --courses-card-title-color: #2d52fdde;
+
+  --footer-resalted-text-color: #ffffff;
 }
 
 
 a:hover {
   transition: all 0.4s ease-in-out;
   background-color: var(--button-color-hover);
-  color: #fff;
+  color: var(--resalted-text-color);
   box-shadow: 0 0 30px var(--button-color-hover), 0 0 50px var(--button-color-hover), 0 0 90px var(--button-color-hover);
 }
 
@@ -70,20 +87,42 @@ h1 {
   html {
     color-scheme: light;
   }
-  body {
-    color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
-  }
+
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
-  }
 
-  body {
-    color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+    --body-color: #ffffff;
+    --background-color: #000000;
+
+    --header-button-color: #00000049;
+    --header-text-button-color: #ffffff;
+    --login-button-hover-color: #001775;
+    --login-button-color: #000000c8;
+    --login-button-shadow-hover: #001771;
+
+    --def-gradient-color-1: #2d3f90;
+    --def-gradient-color-2: #004696;
+    --def-gradient-color-3: #56639b;
+    --def-gradient-color-4: #8b94be;
+    
+    --resalted-text-color: #000000;
+    --little_text: #a6aaae;
+    --resalted-background-color: #00469657;
+
+    --button-color: #005dc8c7;
+    --button-color-hover: #ffffff;
+
+    --courses-background-color: #1f2021;
+    --courses-box-shadow: #ffffff5c 0px 0px 40px;
+    --courses-carrousel-text-color: #ffffff;
+    --courses-card-border-color: #001b91;
+    --courses-card-background-color: #000000;
+    --courses-card-box-shadow: #ffffff1a 0px 0px 4px;
+    --courses-card-box-shadow-hover: #ffffff5c 0px 0px 40px;
+    --courses-card-title-color: #2641bbde;
   }
 }
 
@@ -91,5 +130,18 @@ h1 {
   html {
     --layoutWidth: var(--layoutWidthMax);
     --gutterWidth: calc(var(--windowWidth) / 2  - var(--layoutWidth) / 2);
+    --windowWidth: calc(100vw - var(--scrollbarWidth));
+    --windowHeight: 100vh;
   }
+}
+
+@media screen and (max-width: 1592px) {
+  html {
+    --layoutWidth: 960px;
+    --gutterWidth: calc(var(--windowWidth) / 2  - var(--layoutWidth) / 2);
+  }
+
+  
+
+
 }
