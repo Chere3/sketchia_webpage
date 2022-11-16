@@ -1,28 +1,35 @@
 import Head from "next/head";
 import Script from "next/script";
-import loginStyles from "../../styles/login/login.module.css";
+import loginStyles from "../../styles/auth/auth.module.css";
 import { Poppins } from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { AnalyticsScript } from "..";
 
 const poppins = Poppins({
-    preload: false,
+    preload: true,
     style: "normal",
     weight: "700",
     subsets: ["latin"],
+    fallback: ["Helvetica"]
 });
 
 
-export default function Login() {
+export default function register(params: any) {
+
     return (
         <div>
             <Head>
                 <title>Registrarse</title>
                 <meta name="description" content="Registrarse en Sketchia." />
             </Head>
-
-                <AnalyticsScript />
+            <AnalyticsScript />
+            <div className={loginStyles.background}>
+            <div className={loginStyles.logo}>
+                <Link href="/" className={loginStyles.logo_link}>
+                <Image src="/../sketchia.svg" alt="Logo" height={50} width={250} />
+                </Link>
+            </div>
                 <main className={loginStyles.form}>
                 <div className={loginStyles.form__container}>
                 <div className={poppins.className}>
@@ -68,6 +75,8 @@ export default function Login() {
                     </div>
                 </div>
                 </main>               
-        </div>
+                </div>
+                </div>
+               
     );
 }

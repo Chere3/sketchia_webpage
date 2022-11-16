@@ -1,3 +1,34 @@
+.background {
+    background: linear-gradient(115deg, var(--def-gradient-color-1) 0%, var(--def-gradient-color-2) 25%, var(--def-gradient-color-3) 50%, var(--def-gradient-color-4) 75%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Put the logo top left */
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2.4rem;
+    z-index: 1;
+    filter: var(--logo-filter);
+}
+
+.logo_link:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    box-shadow: none;
+    text-shadow: none;
+    background-color: transparent;
+}
+
 .form {
     margin: 9rem auto;
     padding: 0px;
@@ -37,15 +68,15 @@
     border-width: 0 0 1px;
     width: 353px;
     height: 2rem;
-    color: rgba(0, 0, 0, 0.600);
+    color: var(--login-form-text-color);
     font-family: var(--dm_sans);
-    border-color: rgba(0, 0, 0, 0.099);
+    border-color: var(--login-form-input-bottom-color);
 }
 
 .formInput:focus {
     transition: ease-in-out 0.4s;
-    border-color: #000;
-    box-shadow: 0 1px 0 #000;
+    border-color: var(--login-form-input-bottom-color-focus);
+    box-shadow: var(--login-form-input-bottom-color-focus-shadow);
     font-family: var(--dm_sans);
     outline: none;
 }
@@ -62,8 +93,11 @@
 }
 
 .formButton:hover {
-    background-color: #000;
+    background-color: var(--login-form-network-button-color);
+    color: var(--login-form-input-bottom-color-focus);
     transition: ease-in-out 0.4s;
+    cursor: pointer;
+    
 }
 
 .formNetwork {
@@ -75,7 +109,14 @@
     font-size: 0.9rem;
     border-radius: var(--buttons_border_radius);
     padding: var(--buttons_padding);
-    background-color: #fff;
+    background-color: var(--login-form-network-button-color);
+}
+
+.formNetwork:hover {
+    background-color: var(--login-form-network-button-color-hover);
+    color: var(--login-form-network-button-color-text-hover);
+    transition: ease-in-out 0.4s;
+    cursor: pointer;
 }
 
 .formNetworks {
@@ -98,6 +139,13 @@
 .registerButton {
     color: var(--button-color);
     border-radius: 10px;
-    padding: 0rem .5rem 0rem .5rem;
+    padding: 0rem .5rem 0rem .1rem;
+}
+
+.registerButton:hover {
+    color: var(--login-form-input-bottom-color-focus);
+    background-color: transparent;
+    box-shadow: none;
+    transition: ease-in-out 0.4s;
 }
 

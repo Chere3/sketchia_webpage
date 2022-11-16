@@ -39,7 +39,7 @@ export function AnalyticsScript() {
 return (
   <div>
      <Script
-          id="a"
+          id="clarity_records"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
@@ -52,6 +52,7 @@ return (
         />
 
         <Script
+          id="google_analytics"
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-WB48WCP5H0"
           onLoad={() => {
@@ -129,7 +130,7 @@ export default function Home() {
                   Blog
                 </Link>
                 <Link
-                  href="/about"
+                  href="/info/about"
                   className={headerStyles.header__container__text__description}
                 >
                   Acerca de nosotros
@@ -532,7 +533,7 @@ export default function Home() {
             <div className={footerStyles.footer__container__links}>
               <div className={dm_sans.className}>
                 <Link
-                  href="/about"
+                  href="/info/about"
                   className={footerStyles.footer__container__link}
                 >
                   Información
@@ -569,7 +570,7 @@ export default function Home() {
                     Cursos
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/info/contact"
                     className={footerStyles.footer__container__link}
                   >
                     Contacto

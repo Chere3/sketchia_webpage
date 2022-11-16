@@ -1,16 +1,18 @@
 import Head from "next/head";
 import Script from "next/script";
-import loginStyles from "../../styles/login/login.module.css";
+import loginStyles from "../../styles/auth/auth.module.css";
 import { Poppins } from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { AnalyticsScript } from "..";
 
 const poppins = Poppins({
-    preload: false,
+    preload: true,
     style: "normal",
     weight: "700",
     subsets: ["latin"],
+    variable: "--poppins",
+    fallback: ["Helvetica"]
 });
 
 
@@ -22,6 +24,12 @@ export default function Login() {
                 <meta name="description" content="Iniciar sesión" />
             </Head>
             <AnalyticsScript />
+            <div className={loginStyles.background}>
+            <div className={loginStyles.logo}>
+                <Link href="/" className={loginStyles.logo_link}>
+                <Image src="/../sketchia.svg" alt="Logo" height={50} width={250} />
+                </Link>
+            </div>
                 <main className={loginStyles.form}>
                 <div className={loginStyles.form__container}>
                 <div className={poppins.className}>
@@ -66,7 +74,8 @@ export default function Login() {
                     </div>
                     </div>
                 </div>
-                </main>               
+                </main>
+                </div>               
         </div>
     );
 }
