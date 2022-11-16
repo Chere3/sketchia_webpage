@@ -42,6 +42,7 @@
     justify-content: left;
     position: relative;
     opacity: .9;
+    font-family: var(--extrafett);
   }
   
   .title,

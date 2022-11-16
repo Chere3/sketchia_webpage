@@ -34,30 +34,11 @@ const dm_sans = Poppins({
   subsets: ["latin"],
 });
 
-export default function Home() {
-  return (
-    <div className={titleStyles.container}>
-      <Head>
-        <title>Sketchia</title>
-        <meta
-          name="description"
-          content="Empieza a aprender e instruir con sketchia."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      <main className={headerStyles.header}>
-        <Script
-          src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z"
-          strategy="lazyOnload"
-          onLoad={() => {
-            // @ts-ignore
-            var gradient = new Gradient();
-            gradient.initGradient(".title_gradient_canvas__Et8AW");
-            console.log("Iniciado gradiente.");
-          }}
-        ></Script>
-        <Script
+export function AnalyticsScript() {
+return (
+  <div>
+     <Script
           id="a"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -86,6 +67,35 @@ export default function Home() {
 
             // @ts-ignore
             gtag("config", "G-WB48WCP5H0");
+          }}
+        ></Script>
+  </div>
+)
+}
+
+export default function Home() {
+  return (
+    <div className={titleStyles.container}>
+      <Head>
+        <title>Sketchia</title>
+        <meta
+          name="description"
+          content="Empieza a aprender e instruir con sketchia."
+        />
+        <link rel="icon" href="/favicon.ico" />
+         
+      </Head>
+
+      <main className={headerStyles.header}>
+      <AnalyticsScript />
+        <Script
+          src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z"
+          strategy="lazyOnload"
+          onLoad={() => {
+            // @ts-ignore
+            var gradient = new Gradient();
+            gradient.initGradient(".title_gradient_canvas__Et8AW");
+            console.log("Iniciado gradiente.");
           }}
         ></Script>
         <canvas className={titleStyles.gradient_canvas} />

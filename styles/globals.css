@@ -57,6 +57,8 @@ html {
   --courses-card-title-color: #2d52fdde;
 
   --footer-resalted-text-color: #ffffff;
+
+  --login-box-shadow: var(--courses-box-shadow);
 }
 
 

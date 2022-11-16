@@ -18,14 +18,15 @@ export default function Login() {
     return (
         <div>
             <Head>
-                <title>Iniciar sesión</title>
-                <meta name="description" content="Iniciar sesión" />
+                <title>Registrarse</title>
+                <meta name="description" content="Registrarse en Sketchia." />
             </Head>
-            <AnalyticsScript />
+
+                <AnalyticsScript />
                 <main className={loginStyles.form}>
                 <div className={loginStyles.form__container}>
                 <div className={poppins.className}>
-                <div className={loginStyles.formTitle}>Inicia sesión</div>
+                <div className={loginStyles.formTitle}>Regístrate</div>
                     <form className={loginStyles.formBody}>
                         <div className={loginStyles.formGroup}>
                             <label htmlFor="email">Correo electrónico</label>
@@ -36,33 +37,33 @@ export default function Login() {
                             <input type="password" name="password" className={loginStyles.formInput} />
                         </div>
                         <div className={loginStyles.formGroup}>
-                            <button type="submit" className={loginStyles.formButton}>Iniciar sesión</button>
+                            <button type="submit" className={loginStyles.formButton}>Continuar</button>
                         </div>
                         <div className={loginStyles.formNetworks}>
                             <Link href="#">
                             <div className={loginStyles.formNetwork}>
                                 <Image src="/images/items/google_logo.png" alt="Google" height={20} width={23} className={loginStyles.formNetwork__image} />
-                                <span>Iniciar sesión con Google</span>
+                                <span>Regístrate con Google</span>
                             </div>
                             </Link>
                             <Link href="#">
                             <div className={loginStyles.formNetwork}>
                                 <Image src="/images/items/facebook_logo.png" alt="Facebook" height={20} width={23} className={loginStyles.formNetwork__image} />
-                                <span>Iniciar sesión con Facebook</span>
+                                <span>Regístrate con Facebook</span>
                             </div>
                             </Link>
 
                             <Link href="#">
                             <div className={loginStyles.formNetwork}>
                                 <Image src="/images/items/discord_logo.png" alt="Discord" height={20} width={26} className={loginStyles.formNetwork__image} />
-                                <span>Iniciar sesión con Discord</span>
+                                <span>Regístrate con Discord</span>
                                 </div>
                                 </Link>
                         </div>
                     </form>
                     <div className={loginStyles.formFooter}>
-                        <p className={loginStyles.registerText}>¿No tienes una cuenta?</p>
-                        <Link href="/auth/register" className={loginStyles.registerButton}>Regístrate</Link>
+                        <p className={loginStyles.registerText}>¿Ya tienes una cuenta?</p>
+                        <Link href="/auth/login" className={loginStyles.registerButton}>Inicia sesión</Link>
                     </div>
                     </div>
                 </div>
