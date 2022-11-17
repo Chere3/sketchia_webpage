@@ -1,0 +1,24 @@
+.coursesTitle__background {
+    background: linear-gradient(115deg, var(--def-gradient-color-1) 0%, var(--def-gradient-color-2) 25%, var(--def-gradient-color-3) 50%, var(--def-gradient-color-4) 75%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 55vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.coursesTitle__background__container__title {
+    font-size: 16rem;
+}
+
+.coursesTitle__background__container {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 37vh;
+    margin-inline: 30;
+}

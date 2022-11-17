@@ -67,7 +67,16 @@ html {
   --login-form-network-button-color-hover: #000000;
   --login-form-network-button-color-text-hover: #ffffff;
 
-  --logo-filter: invert(0)
+  --logo-filter: invert(0);
+  --global-header-background-color: #000000;
+  --global-header-text-color: #fff;
+  --logo-global-header-filter: invert(1);
+
+  --global-footer-background-color: var(--global-header-background-color);
+  --global-footer-text-color: var(--global-header-text-color);
+  --logo-global-footer-filter: var(--logo-global-header-filter);
+
+  --courses-card-background-color: var(--courses-background-color);
 }
 
 
@@ -148,6 +157,11 @@ h1 {
   --login-form-network-button-color-text-hover: #000000;
 
   --logo-filter: invert(1);
+  --global-header-background-color: #ffffff;
+  --global-header-text-color: rgb(0, 0, 0);
+
+  --logo-global-header-filter: invert(0);
+
   }
 }
 

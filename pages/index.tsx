@@ -19,13 +19,6 @@ const extrafett = localFont({
   preload: true,
 });
 
-const sovana = localFont({
-  src: "../public/fonts/sovana-regular-webfont.woff2",
-  variable: "--sovana",
-  style: "normal",
-  preload: true,
-});
-
 const dm_sans = Poppins({
   variable: "--dm_sans",
   preload: true,

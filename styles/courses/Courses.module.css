@@ -1,0 +1,16 @@
+/* Make a carrousel of courses and a card for each course */
+ 
+
+.coursesCarrousel__container {
+    margin-top: 81vh;
+    display: flex;
+}
+
+.coursesCarrousel__container__card {
+    border-color: var(--courses-carrousel-border-color);
+    border-radius: 10px;
+    background-color: var(--courses-card-background-color);
+    height: 480px;
+    width: calc(16.6vw - var(--scrollbarWidth));
+    box-shadow: var(--courses-card-box-shadow);
+}
