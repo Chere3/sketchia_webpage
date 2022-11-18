@@ -4,9 +4,9 @@ import styles from "../styles/interface/Global.module.css";
 import Image from "next/image";
 import { Poppins } from "@next/font/google";
 import Link from "next/link";
-import titleStyles from "../styles/courses/Title.module.css"
+import titleStyles from "../styles/blog/Title.module.css"
 import localFont from "@next/font/local";
-import coursesCarrouselStyles from "../styles/courses/Courses.module.css";
+import blogCarrouselStyles from "../styles/blog/Blogs.module.css";
 
 const poppins = Poppins({
     weight: "700",
@@ -26,16 +26,16 @@ const extrafett = localFont({
 
 function BlogCard() {
     return (
-        <Link href="/blog/1" className={coursesCarrouselStyles.coursesCarrousel__container__card__link}>
-        <div className={coursesCarrouselStyles.coursesCarrousel__container__card}>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__image}>
-                        <Image src="/images/not_image_image.png" alt="Logo" width={290} height={168} className={coursesCarrouselStyles.coursesCarrousel__container__card__image__logo} />
+        <Link href="/blog/1" className={blogCarrouselStyles.coursesCarrousel__container__card__link}>
+        <div className={blogCarrouselStyles.coursesCarrousel__container__card}>
+                    <div className={blogCarrouselStyles.coursesCarrousel__container__card__image}>
+                        <Image src="/images/not_image_image.png" alt="Logo" width={290} height={168} className={blogCarrouselStyles.coursesCarrousel__container__card__image__logo} />
                     </div>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__title}>
-                        <h1 className={coursesCarrouselStyles.coursesCarrousel__container__card__title__text}>Blog #1</h1>
+                    <div className={blogCarrouselStyles.coursesCarrousel__container__card__title}>
+                        <h1 className={blogCarrouselStyles.coursesCarrousel__container__card__title__text}>Blog #1</h1>
                     </div>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__description}>
-                        <p className={coursesCarrouselStyles.coursesCarrousel__container__card__description__text}>Este es un blog, gracias a esta blog se pueden mostrar diferentes páginas diferentes y el como se muestran.</p>
+                    <div className={blogCarrouselStyles.coursesCarrousel__container__card__description}>
+                        <p className={blogCarrouselStyles.coursesCarrousel__container__card__description__text}>Este es un blog, gracias a esta blog se pueden mostrar diferentes páginas diferentes y el como se muestran.</p>
                     </div>
                 </div>
         </Link>
@@ -45,8 +45,8 @@ function BlogCard() {
 function BlogCarrousel() {
     return (
         <div className={poppins.className}>
-        <main className={coursesCarrouselStyles.coursesCarrousel}>
-            <div className={coursesCarrouselStyles.coursesCarrousel__container}>
+        <main className={blogCarrouselStyles.coursesCarrousel}>
+            <div className={blogCarrouselStyles.coursesCarrousel__container}>
                 <BlogCard />
                 <BlogCard />
                 <BlogCard />
@@ -81,26 +81,26 @@ function courses() {
                 </div>
             </div>
         </main>
-        <main className={titleStyles.coursesTitle}>
-            <div className={titleStyles.coursesTitle__background}>
-                <div className={titleStyles.coursesTitle__background__container}>
+        <main className={titleStyles.blogTitle}>
+            <div className={titleStyles.blogTitle__background}>
+                <div className={titleStyles.blogTitle__background__container}>
                     <div className={extrafett.className}>
-                    <h1 className={titleStyles.coursesTitle__background__container__title}>Blog</h1>
+                    <h1 className={titleStyles.blogTitle__background__container__title}>Blog</h1>
                     </div>
                     <div className={poppins.className}>
-                    <p className={titleStyles.coursesTitle__background__container__description}>Lee todos los textos hechos por profesionales de sketchia, para todos<br/>para aprender de forma visual y gratuitamente.</p>
+                    <p className={titleStyles.blogTitle__background__container__description}>Lee todos los textos hechos por profesionales de sketchia, para todos<br/>para aprender de forma visual y gratuitamente.</p>
                     </div>
                     </div>
             </div>
         </main>
-        <div className={coursesCarrouselStyles.separator}>
+        <div className={blogCarrouselStyles.separator}>
             <br />
         </div>
         <BlogCarrousel />
         <BlogCarrousel />
         <BlogCarrousel />
         <BlogCarrousel />
-        <div className={coursesCarrouselStyles.separator}>
+        <div className={blogCarrouselStyles.separator}>
             <br />
         </div>
         <main>

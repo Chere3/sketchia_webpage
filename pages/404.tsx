@@ -7,7 +7,7 @@ import { Poppins } from "@next/font/google";
 import { AnalyticsScript } from ".";
 
 const extrafett = localFont({
-  src: "../public/fonts/sohne-extrafett-webfont.woff2",
+  src:  '../public/fonts/sohne-extrafett-webfont.woff2',
   variable: "--extrafett",
   style: "normal",
   preload: true,
