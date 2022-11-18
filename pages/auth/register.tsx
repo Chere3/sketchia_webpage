@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 
-export default function register(params: any) {
+function register(params: any) {
 
     return (
         <div>
@@ -80,3 +80,5 @@ export default function register(params: any) {
                
     );
 }
+
+export default register;

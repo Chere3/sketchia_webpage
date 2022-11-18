@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 import loginStyles from "../../styles/auth/auth.module.css";
 import { Poppins } from "@next/font/google";
 import Image from "next/image";
@@ -16,7 +15,7 @@ const poppins = Poppins({
 });
 
 
-export default function Login() {
+function Login() {
     return (
         <div>
             <Head>
@@ -79,3 +78,5 @@ export default function Login() {
         </div>
     );
 }
+
+export default Login;

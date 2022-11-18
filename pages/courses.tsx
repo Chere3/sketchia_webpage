@@ -24,9 +24,42 @@ const extrafett = localFont({
     preload: true,
   });
 
+function CourseCard() {
+    return (
+        <Link href="/courses/1" className={coursesCarrouselStyles.coursesCarrousel__container__card__link}>
+        <div className={coursesCarrouselStyles.coursesCarrousel__container__card}>
+                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__image}>
+                        <Image src="/images/not_image_image.png" alt="Logo" width={290} height={168} className={coursesCarrouselStyles.coursesCarrousel__container__card__image__logo} />
+                    </div>
+                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__title}>
+                        <h1 className={coursesCarrouselStyles.coursesCarrousel__container__card__title__text}>Curso #1</h1>
+                    </div>
+                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__description}>
+                        <p className={coursesCarrouselStyles.coursesCarrousel__container__card__description__text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nisl nunc aliquet nisl, quis aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nunc aliquet nisl, quis aliquam nisl nisl sit amet nisl.</p>
+                    </div>
+                </div>
+        </Link>
+    )
+}
+
+function CoursesCarrousel() {
+    return (
+        <div className={poppins.className}>
+        <main className={coursesCarrouselStyles.coursesCarrousel}>
+            <div className={coursesCarrouselStyles.coursesCarrousel__container}>
+                <CourseCard />
+                <CourseCard />
+                <CourseCard />
+                <CourseCard />
+                <CourseCard />
+                    </div>
+                    </main>
+                    </div>
+    )
+}
 
 
-export default function courses() {
+function courses() {
     return (
         <div>
             <Head>
@@ -42,9 +75,9 @@ export default function courses() {
             </div>
             <div className={poppins.className}>
             <div className={styles.globalHeader__container__links}>
-                <a href="#" className={styles.globalHeader__container__links__link}>Blog</a>
-                <a href="#" className={styles.globalHeader__container__links__link}>Acerca de nosotros</a>
-                <a href="#" className={styles.globalHeader__container__links__link}>Iniciar sesión</a>
+                <a href="/blog" className={styles.globalHeader__container__links__link}>Blog</a>
+                <a href="/info/about" className={styles.globalHeader__container__links__link}>Acerca de nosotros</a>
+                <a href="/auth/login" className={styles.globalHeader__container__links__link}>Iniciar sesión</a>
                 </div>
             </div>
         </main>
@@ -60,48 +93,16 @@ export default function courses() {
                     </div>
             </div>
         </main>
-
-        <main className={coursesCarrouselStyles.coursesCarrousel}>
-            <div className={coursesCarrouselStyles.coursesCarrousel__container}>
-                <div className={coursesCarrouselStyles.coursesCarrousel__container__card}>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__image}>
-                        <Image src="/sketchia.svg" alt="Logo" width={200} height={50} className={coursesCarrouselStyles.coursesCarrousel__container__card__image__logo} />
-                    </div>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__title}>
-                        <h1 className={coursesCarrouselStyles.coursesCarrousel__container__card__title__text}>Curso de diseño</h1>
-                    </div>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__description}>
-                        <p className={coursesCarrouselStyles.coursesCarrousel__container__card__description__text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nisl nunc aliquet nisl, quis aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nunc aliquet nisl, quis aliquam nisl nisl sit amet nisl.</p>
-                    </div>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__button}>
-                        <button className={coursesCarrouselStyles.coursesCarrousel__container__card__button__text}>Ver curso</button>
-                    </div>
-                </div>
-                <div className={coursesCarrouselStyles.coursesCarrousel__container__card}>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__image}>
-                        <Image src="/sketchia.svg" alt="Logo" width={200} height={50} className={coursesCarrouselStyles.coursesCarrousel__container__card__image__logo} />
-                    </div>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__title}>
-                        <h1 className={coursesCarrouselStyles.coursesCarrousel__container__card__title__text}>Curso de diseño</h1>
-                    </div>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__description}>
-                        <p className={coursesCarrouselStyles.coursesCarrousel__container__card__description__text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nisl nunc aliquet nisl, quis aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nunc aliquet nisl, quis aliquam nisl nisl sit amet nisl.</p>
-                    </div>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__button}>
-                        <button className={coursesCarrouselStyles.coursesCarrousel__container__card__button__text}>Ver curso</button>
-                    </div>
-                </div>
-                <div className={coursesCarrouselStyles.coursesCarrousel__container__card}>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__image}>
-                        <Image src="/sketchia.svg" alt="Logo" width={200} height={50} className={coursesCarrouselStyles.coursesCarrousel__container__card__image__logo} />
-                    </div>
-                    <div className={coursesCarrouselStyles.coursesCarrousel__container__card__title}>
-                        <h1 className={coursesCarrouselStyles.coursesCarrousel__container__card__title__text}>Curso de diseño</h1>
-                    </div>
-                    </div>
-                    </div>
-        </main>
-
+        <div className={coursesCarrouselStyles.separator}>
+            <br />
+        </div>
+        <CoursesCarrousel />
+        <CoursesCarrousel />
+        <CoursesCarrousel />
+        <CoursesCarrousel />
+        <div className={coursesCarrouselStyles.separator}>
+            <br />
+        </div>
         <main>
             <div className={styles.globalFooter}>
                 <div className={styles.globalFooter__container}>
@@ -110,14 +111,14 @@ export default function courses() {
                     </div>
                     <div className={poppins.className}>
                     <div className={styles.globalFooter__container__links}>
-                        <Link href="#" className={styles.globalFooter__container__links__link}>Blog</Link>
-                        <Link href="#" className={styles.globalFooter__container__links__link}>Acerca de nosotros</Link>
-                        <Link href="#" className={styles.globalFooter__container__links__link}>Iniciar sesión</Link>
-                        <Link href="#" className={styles.globalFooter__container__links__link}>Cursos</Link>
-                        <Link href="#" className={styles.globalFooter__container__links__link}>Contacto</Link>
-                        <Link href="#" className={styles.globalFooter__container__links__link}>Política de privacidad</Link>
-                        <Link href="#" className={styles.globalFooter__container__links__link}>Términos y condiciones</Link>
-                        <Link href="#" className={styles.globalFooter__container__links__link}>Política de cookies</Link>
+                        <Link href="/blog" className={styles.globalFooter__container__links__link}>Blog</Link>
+                        <Link href="/info/about" className={styles.globalFooter__container__links__link}>Acerca de nosotros</Link>
+                        <Link href="/auth" className={styles.globalFooter__container__links__link}>Iniciar sesión</Link>
+                        <Link href="/courses" className={styles.globalFooter__container__links__link}>Cursos</Link>
+                        <Link href="/info/contact" className={styles.globalFooter__container__links__link}>Contacto</Link>
+                        <Link href="/legal/privacy" className={styles.globalFooter__container__links__link}>Política de privacidad</Link>
+                        <Link href="/legal/terms" className={styles.globalFooter__container__links__link}>Términos y condiciones</Link>
+                        <Link href="/legal/cookies" className={styles.globalFooter__container__links__link}>Política de cookies</Link>
                     </div>
                     </div>
                     </div>
@@ -125,4 +126,6 @@ export default function courses() {
         </main>
         </div>
     )
-}
+};
+
+export default courses;

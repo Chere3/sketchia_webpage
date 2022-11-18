@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { AnalyticsScript } from "../";
 
-export default function legal_terms() {
+function legal_terms() {
     return (
         <div>
             <Head>
@@ -12,3 +12,5 @@ export default function legal_terms() {
         </div>
     )
 }
+
+export default legal_terms;

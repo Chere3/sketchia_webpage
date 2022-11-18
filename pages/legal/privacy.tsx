@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { AnalyticsScript } from "../";
 
-export default function legal_privacy() {
+function legal_privacy() {
     return (
         <div>
             <Head>
@@ -12,3 +12,5 @@ export default function legal_privacy() {
         </div>
     )
 }
+
+export default legal_privacy;

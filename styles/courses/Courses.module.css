@@ -2,8 +2,10 @@
  
 
 .coursesCarrousel__container {
-    margin-top: 81vh;
     display: flex;
+    margin-inline: 7vw;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .coursesCarrousel__container__card {
@@ -13,4 +15,37 @@
     height: 480px;
     width: calc(16.6vw - var(--scrollbarWidth));
     box-shadow: var(--courses-card-box-shadow);
+    margin-inline: 1vw;
+}
+
+.coursesCarrousel__container__card:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+    box-shadow: var(--courses-card-box-shadow-hover);
+}
+
+.separator {
+    border: 1px solid var(--courses-card-separator-color);
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+}
+
+.coursesCarrousel__container__card__title {
+    color: var(--courses-card-title-color);
+    font-size: 0.9vw;
+    margin-top: 0.1vw;
+    margin-bottom: -1vw;
+    padding-inline: .16vw;
+}
+
+.coursesCarrousel__container__card__description {
+    margin-top: 0.1vw;
+    font-size: 0.9vw;
+    padding-inline: .16vw;
+}
+
+.coursesCarrousel__container__card__link:hover {
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--body-color);
 }

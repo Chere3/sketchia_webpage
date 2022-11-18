@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { AnalyticsScript } from "../";
 
-export default function about() {
+function about() {
     return (
         <div>
             <Head>
@@ -12,3 +12,5 @@ export default function about() {
         </div>
     )
 }
+
+export default about;

@@ -65,9 +65,9 @@ return (
         ></Script>
   </div>
 )
-}
+};
 
-export default function Home() {
+ function Home() {
   return (
     <div className={titleStyles.container}>
       <Head>
@@ -576,4 +576,6 @@ export default function Home() {
       </main>
     </div>
   );
-}
+};
+
+export default Home;

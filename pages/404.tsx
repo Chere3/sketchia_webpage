@@ -1,7 +1,6 @@
 import localFont from "@next/font/local";
 import Head from "next/head";
 import headerStyles from "../styles/home/header.module.css";
-import Script from "next/script";
 import Styles from "../styles/404/404.module.css";
 import Link from "next/link";
 import { Poppins } from "@next/font/google";
@@ -22,7 +21,7 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-export default function Custom404() {
+function Custom404() {
   return (
     <div>
       <Head>
@@ -48,3 +47,5 @@ export default function Custom404() {
     </div>
   );
 }
+
+export default Custom404;
