@@ -19,7 +19,7 @@
 }
 
 .coursesCarrousel__container__card:hover {
-    transform: scale(0.8);
+    transform: scale(1.1);
     transition: all 0.4s ease-in-out;
     box-shadow: var(--courses-card-box-shadow-hover);
 }
@@ -31,25 +31,17 @@
 }
 
 .coursesCarrousel__container__card__title {
-    color: var(--body-color);
-    font-size: 1.6vw;
+    color: var(--courses-card-title-color);
+    font-size: 0.9vw;
     margin-top: 0.1vw;
     margin-bottom: -1vw;
     padding-inline: .16vw;
-    text-align: center;
-    position: relative;
-    bottom: 23.5vw;
-    left: -63.1px;
 }
 
 .coursesCarrousel__container__card__description {
     margin-top: 0.1vw;
-    font-size: 1.5vw;
+    font-size: 0.9vw;
     padding-inline: .16vw;
-    position: relative;
-    padding-left: 33.7vw;
-    top: -24vw;
-    padding-right: 0.3vw
 }
 
 .coursesCarrousel__container__card__link:hover {

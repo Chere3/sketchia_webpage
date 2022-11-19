@@ -25,19 +25,25 @@
 }
 
 .blogCarrousel__container__card__title {
-    color: var(--courses-card-title-color);
-    font-size: 1.5vw;
+    color: var(--body-color);
+    font-size: 1.6vw;
     margin-top: 0.1vw;
     margin-bottom: -1vw;
     padding-inline: .16vw;
-    transform: translateX(24vw) translateY(-16vw);
+    text-align: center;
+    position: relative;
+    bottom: 23.5vw;
+    left: -63.1px;
 }
 
 .blogCarrousel__container__card__description {
     margin-top: 0.1vw;
     font-size: 1.5vw;
     padding-inline: .16vw;
-    transform: translateX(1vw);
+    position: relative;
+    padding-left: 33.7vw;
+    top: -24vw;
+    padding-right: 0.3vw
 }
 
 .blogCarrousel__container__card__link:hover {
