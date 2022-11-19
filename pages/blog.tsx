@@ -26,16 +26,16 @@ const extrafett = localFont({
 
 function BlogCard() {
     return (
-        <Link href="/blog/1" className={blogCarrouselStyles.coursesCarrousel__container__card__link}>
-        <div className={blogCarrouselStyles.coursesCarrousel__container__card}>
-                    <div className={blogCarrouselStyles.coursesCarrousel__container__card__image}>
-                        <Image src="/images/not_image_image.png" alt="Logo" width={290} height={168} className={blogCarrouselStyles.coursesCarrousel__container__card__image__logo} />
+        <Link href="/blog/1" className={blogCarrouselStyles.blogCarrousel__container__card__link}>
+        <div className={blogCarrouselStyles.blogCarrousel__container__card}>
+                    <div className={blogCarrouselStyles.blogCarrousel__container__card__image}>
+                        <Image src="/images/not_image_image.png" alt="Logo" width={450} height={302} className={blogCarrouselStyles.blogCarrousel__container__card__image__logo} />
                     </div>
-                    <div className={blogCarrouselStyles.coursesCarrousel__container__card__title}>
-                        <h1 className={blogCarrouselStyles.coursesCarrousel__container__card__title__text}>Blog #1</h1>
+                    <div className={blogCarrouselStyles.blogCarrousel__container__card__title}>
+                        <h1 className={blogCarrouselStyles.blogCarrousel__container__card__title__text}>Blog #1</h1>
                     </div>
-                    <div className={blogCarrouselStyles.coursesCarrousel__container__card__description}>
-                        <p className={blogCarrouselStyles.coursesCarrousel__container__card__description__text}>Este es un blog, gracias a esta blog se pueden mostrar diferentes páginas diferentes y el como se muestran.</p>
+                    <div className={blogCarrouselStyles.blogCarrousel__container__card__description}>
+                        <p className={blogCarrouselStyles.blogCarrousel__container__card__description__text}>Este es un blog, gracias a esta blog se pueden mostrar diferentes páginas diferentes y el como se muestran.</p>
                     </div>
                 </div>
         </Link>
@@ -45,8 +45,8 @@ function BlogCard() {
 function BlogCarrousel() {
     return (
         <div className={poppins.className}>
-        <main className={blogCarrouselStyles.coursesCarrousel}>
-            <div className={blogCarrouselStyles.coursesCarrousel__container}>
+        <main className={blogCarrouselStyles.blogCarrousel}>
+            <div className={blogCarrouselStyles.blogCarrousel__container}>
                 <BlogCard />
                 <BlogCard />
                 <BlogCard />
@@ -63,7 +63,7 @@ function courses() {
     return (
         <div>
             <Head>
-            <title>Blog</title>
+            <title>Blog's</title>
         </Head>
 
         <AnalyticsScript />
@@ -85,7 +85,7 @@ function courses() {
             <div className={titleStyles.blogTitle__background}>
                 <div className={titleStyles.blogTitle__background__container}>
                     <div className={extrafett.className}>
-                    <h1 className={titleStyles.blogTitle__background__container__title}>Blog</h1>
+                    <h1 className={titleStyles.blogTitle__background__container__title}>Blog's</h1>
                     </div>
                     <div className={poppins.className}>
                     <p className={titleStyles.blogTitle__background__container__description}>Lee todos los textos hechos por profesionales de sketchia, para todos<br/>para aprender de forma visual y gratuitamente.</p>
