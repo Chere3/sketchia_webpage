@@ -10,7 +10,7 @@
 
 > **¿Qué es Sketchia?**
 
-Sketchia es un proyecto de código abierto creado con la finalidad de crear una página web profesional para todos los alumnos y profesores que quieran aprender a programar, diseñar y crear aplicaciones web y etc con un ejemplo práctico.
+Sketchia es un proyecto de código abierto creado con la finalidad de crear una página web profesional para todos los alumnos y profesores que quieran aprender a programar, diseñar, crear aplicaciones web y etc. con un ejemplo práctico.
 
 Al igual que esta página fue creada con el motivo de crear una página y resultado profesional en todo ámbito, para su fácil acceso por todas y todos los usuarios.
 
