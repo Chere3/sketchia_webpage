@@ -51,7 +51,7 @@ Al igual que esta página fue creada con el motivo de crear una página y result
 > **Demostraciones**
 
 - [Página Principal](https://sketchia-webpage-4f3fi0uv0-chere3.vercel.app/)
-- [Página de logueo](https://sketchia-webpage-4f3fi0uv0-chere3.vercel.app/login)
+- [Página de logueo](https://sketchia-webpage-4f3fi0uv0-chere3.vercel.app/auth/login)
 
 
 <br><br>
