@@ -40,7 +40,7 @@ return (
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "ehcxoxhdt0");`,
+        })(window, document, "clarity", "script", ${process.env.CLARITY});`,
           }}
         />
 
@@ -60,7 +60,7 @@ return (
             gtag("js", new Date());
 
             // @ts-ignore
-            gtag("config", "G-WB48WCP5H0");
+            gtag("config", `${process.env.GOOGLE_ANALYTICS}`);
           }}
         ></Script>
   </div>
