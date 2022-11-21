@@ -50,8 +50,8 @@ Al igual que esta página fue creada con el motivo de crear una página y result
 
 > **Demostraciones**
 
-- [Página Principal](https://beta.sketchia.com.mx)
-- [Página de logueo](https://beta.sketchia.com.mx/login)
+- [Página Principal](https://sketchia-webpage-4f3fi0uv0-chere3.vercel.app/)
+- [Página de logueo](https://sketchia-webpage-4f3fi0uv0-chere3.vercel.app/login)
 
 
 <br><br>
