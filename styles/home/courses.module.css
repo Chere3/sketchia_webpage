@@ -1,0 +1,97 @@
+.courses_info {
+    min-height: 100vh;
+    padding: 9rem 0;
+    padding-top: 22px;
+    flex: 1 1;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .courses__info__container {
+    align-content: center;
+    background: var(--courses-background-color);
+    left: -12vh;
+    position: relative;
+    align-items: left;
+    height: 976px;
+    width: calc(100.6vw - var(--scrollbarWidth));
+    right: 0.00001vh;
+    box-shadow: var(--courses-box-shadow);
+  }
+  
+  .courses__info__container__text__title {
+    font-style: normal;
+    top: 0rem;
+    position: relative;
+    opacity: .9;
+    text-align: center;
+    font-size: 5rem;
+    padding-left: 7rem;
+    padding-top: 6rem;
+  }
+  
+  .courses__carrousel {
+    padding: 75px 5rem 0rem 5rem;
+    padding-top: 80px;
+    max-height: 44rem;
+    height: 35.2rem;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .courses__carrousel__container {
+    margin-inline: -0.7rem;
+      padding: 0rem 0rem 0 0rem;
+      height: 483px;
+      display: flex;
+      position: absolute;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(96.6vw - var(--scrollbarWidth));
+      color: var(--courses-carrousel-text-color);
+      font-size: calc(2.7rem - var(--scrollbarWidth));
+  }
+  
+  .courses__carrousel__container__card {
+    border-color: var(--courses-carrousel-border-color);
+    border-radius: 10px;
+    background-color: var(--courses-card-background-color);
+    height: 480px;
+    width: calc(16.6vw - var(--scrollbarWidth));
+    box-shadow: var(--courses-card-box-shadow);
+  }
+  
+  .courses__carrousel__container__card:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+    box-shadow: var(--courses-card-box-shadow-hover);
+  }
+  
+  .courses__carrousel__container__card__text__title {
+    color: var(--courses-card-title-color);
+  }
+  
+  .courses__carrousel__container__card__text__description {
+    margin-top: 2px;
+    font-size: calc(2.7rem - var(--scrollbarWidth));
+  }
+  
+  .courses__carrousel__container__card__text__title, .courses__carrousel__container__card__text__description {
+    padding: 0rem 0.8rem 0rem 0.8rem;
+  }
+  
+  .courses__carrousel__container__card__image {
+    padding-inline: calc(40px - var(--scrollbarWidth));
+    padding-top: 10px;
+    border-radius: 100px;
+  }
+
+  .courses__carrousel__container__card__image__img {
+    width: calc(15.6vw - var(--scrollbarWidth));
+  }
+  

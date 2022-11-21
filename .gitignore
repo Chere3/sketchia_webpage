@@ -1,2 +1,14 @@
+http-server
 node_modules
 .env
+.local
+.next
+dist
+sketchia.conf
+yarn-error.log
+
+# Next js files to ighore
+.next
+dist
+.env
+.env.local

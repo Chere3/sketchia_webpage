@@ -1,0 +1,77 @@
+
+  .gradient_canvas {
+    --gradient-color-1: var(--def-gradient-color-1);
+    --gradient-color-2: var(--def-gradient-color-2);
+    --gradient-color-3: var(--def-gradient-color-3);
+    --gradient-color-4: var(--def-gradient-color-4);
+    border-radius: 0% 0% 1% 100%/0% 0% 0% 100%;
+    right: 0.00001vh;
+    position: absolute;
+    align-items: left;
+    height: 600px;
+    width: calc(var(--windowQuit) - var(--scrollbarWidth));
+  }
+
+  .container {
+    padding: 0 7rem;
+  }
+  
+  .main {
+    min-height: 100vh;
+    padding: 9rem 0;
+    padding-top: 0px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title__container {
+    margin-bottom: 10px;
+  }
+  
+  .title a:hover,
+  .title a:focus,
+  .title a:active {
+    text-decoration: underline;
+  }
+  
+  .title {
+    font-size: 7rem;
+    font-style: normal;
+    top: 12rem;
+    justify-content: left;
+    position: relative;
+    opacity: .9;
+    font-family: var(--extrafett);
+  }
+  
+  .title,
+  .description {
+    text-align: left;
+  }
+  
+  .italic {
+    color: var(--resalted-text-color);
+    background-color: var(--resalted-background-color);
+    text-align: center;
+  }
+  
+  
+  .description {
+    line-height: 1.5;
+    font-size: 1.43rem;
+    position: relative;
+    top: 9.6rem;
+    color: var(--little_text);
+    padding: 1.56rem 0rem 0rem 0rem;
+  }
+  
+  .title__button__primary {
+    background-color: var(--button-color);
+    color: var(--resalted-text-color);
+    padding: var(--buttons_padding);
+    border-radius: var(--buttons_border_radius);
+    position: relative;
+    top: 10rem;
+  }
+  

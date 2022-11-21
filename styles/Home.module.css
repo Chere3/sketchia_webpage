@@ -1,0 +1,49 @@
+
+.consts {
+  --width: var(--windowWidth)
+}
+
+.consts {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+
+  .italic {
+    color: #111;
+    background-color: #0d52a099;
+  }
+
+  .logo {
+    filter: invert(1);
+  }
+
+  .header__container__text {
+    color: #ffffff;
+  }
+
+  .gradient_canvas {
+    --gradient-color-1: #0020b0;
+    --gradient-color-2: #0054b4;
+    --gradient-color-3: #7383cc;
+    --gradient-color-4: #838cb4;
+  }
+
+}

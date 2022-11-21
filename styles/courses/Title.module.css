@@ -1,0 +1,29 @@
+.coursesTitle__background {
+    background: linear-gradient(115deg, var(--def-gradient-color-1) 0%, var(--def-gradient-color-2) 25%, var(--def-gradient-color-3) 50%, var(--def-gradient-color-4) 75%);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 55vh;
+    width: 100vw;
+    position: relative;
+    top: -29vh;
+    left: 0;
+}
+
+.coursesTitle__background__container__title {
+    font-size: 16rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 37vh;
+    padding-top: 35vh;
+}
+
+.coursesTitle__background__container {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 37vh;
+    margin-inline: 30;
+    padding-bottom: 10vh;
+}

@@ -1,0 +1,186 @@
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--body-color);
+  background-color: var(--background-color);
+  font-family: var(--poppins), Arial, Helvetica, sans-serif;
+}
+
+html {
+  /* Def sizes */
+  --layoutWidthMax: 1080px;
+  --scrollbarWidth: 30px;
+  
+  --windowQuit: 140.86vw;
+
+  --buttons_padding: .5em 1em;
+  --buttons_border_radius: 10px;
+
+
+
+  /* Home def colors */
+
+  --body-color: #000000;
+  --background-color: #ffff;
+
+
+  --header-button-color: #ffffff49;
+  --header-text-button-color: #000000;
+  --login-button-hover-color: #0027c3;
+  --login-button-color: #ffffffc8;
+  --login-button-shadow-hover: #022dda;
+
+  --def-gradient-color-1: #4663e8;
+  --def-gradient-color-2: #0070f3;
+  --def-gradient-color-3: #8497f0;
+  --def-gradient-color-4: #bac5f8;
+  
+  --resalted-text-color: #ffffff;
+  --little_text: #425466;
+  --resalted-background-color: #0077ff57;
+
+  --button-color: #0071f3c7;
+  --button-color-hover: #4da0ff;
+
+  --courses-background-color: #f6f9fc;
+  --courses-box-shadow: #0000005c 0px 0px 40px;
+  --courses-carrousel-text-color: #000000;
+
+  --courses-card-border-color: #0020b0;
+  --courses-card-background-color: #ffffff;
+  --courses-card-box-shadow: #0000001a 0px 0px 4px;
+  --courses-card-box-shadow-hover: #0000005c 0px 0px 40px;
+  --courses-card-title-color: #2d52fdde;
+
+  --footer-resalted-text-color: #ffffff;
+  --login-box-shadow: #0000005c 0px 0px 20px;
+
+  --login-form-text-color: #00000080;
+  --login-form-input-bottom-color: #00000099;
+  --login-form-input-bottom-color-focus: #000000;
+  --login-form-input-bottom-color-focus-shadow: 0 1px 0 #000000;
+  --login-form-network-button-color: #dbdbdb;
+  --login-form-network-button-shadow: #0000005c 0px 0px 0.3px;
+  --login-form-network-button-color-hover: #000000;
+  --login-form-network-button-color-text-hover: #ffffff;
+
+  --logo-filter: invert(0);
+  --global-header-background-color: #000000;
+  --global-header-text-color: #fff;
+  --logo-global-header-filter: invert(1);
+
+  --global-footer-background-color: var(--global-header-background-color);
+  --global-footer-text-color: var(--global-header-text-color);
+  --logo-global-footer-filter: var(--logo-global-header-filter);
+
+  --courses-card-background-color: var(--courses-background-color);
+}
+
+
+a:hover {
+  transition: all 0.4s ease-in-out;
+  background-color: var(--button-color-hover);
+  color: var(--resalted-text-color);
+  box-shadow: 0 0 30px var(--button-color-hover), 0 0 50px var(--button-color-hover), 0 0 90px var(--button-color-hover);
+}
+
+/* Change scrollbar design */
+
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0px;
+  margin-block: 0px;
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+
+    --body-color: #ffffff;
+    --background-color: #000000;
+
+    --header-button-color: #00000049;
+    --header-text-button-color: #ffffff;
+    --login-button-hover-color: #001775;
+    --login-button-color: #000000c8;
+    --login-button-shadow-hover: #001771;
+
+    --def-gradient-color-1: #2d3f90;
+    --def-gradient-color-2: #004696;
+    --def-gradient-color-3: #56639b;
+    --def-gradient-color-4: #8b94be;
+    
+    --resalted-text-color: #000000;
+    --little_text: #a6aaae;
+    --resalted-background-color: #00469657;
+
+    --button-color: #005dc8c7;
+    --button-color-hover: #ffffff;
+
+    --courses-background-color: #1f2021;
+    --courses-box-shadow: #ffffff5c 0px 0px 40px;
+    --courses-carrousel-text-color: #ffffff;
+    --courses-card-border-color: #001b91;
+    --courses-card-background-color: #000000;
+    --courses-card-box-shadow: #ffffff1a 0px 0px 4px;
+    --courses-card-box-shadow-hover: #ffffff5c 0px 0px 40px;
+    --courses-card-title-color: #2641bbde;
+
+  --login-form-text-color: #ffffff80;
+  --login-form-input-bottom-color: #ffffff99;
+  --login-form-input-bottom-color-focus: #ffffff;
+  --login-form-input-bottom-color-focus-shadow: 0 1px 0 #ffffff;
+  --login-form-network-button-color: #373737;
+  --login-form-network-button-shadow: #0000005c 0px 0px 0.3px;
+  --login-form-network-button-color-hover: #ffffff;
+  --login-form-network-button-color-text-hover: #000000;
+
+  --logo-filter: invert(1);
+  --global-header-background-color: #ffffff;
+  --global-header-text-color: rgb(0, 0, 0);
+
+  --logo-global-header-filter: invert(0);
+
+  }
+}
+
+@media (min-width: 1112px) {
+  html {
+    --layoutWidth: var(--layoutWidthMax);
+    --gutterWidth: calc(var(--windowWidth) / 2  - var(--layoutWidth) / 2);
+    --windowWidth: calc(100vw - var(--scrollbarWidth));
+    --windowHeight: 100vh;
+  }
+}
+
+@media screen and (max-width: 1592px) {
+  html {
+    --layoutWidth: 960px;
+    --gutterWidth: calc(var(--windowWidth) / 2  - var(--layoutWidth) / 2);
+  }
+
+  
+
+
+}

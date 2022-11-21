@@ -1,0 +1,57 @@
+.blogCarrousel__container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 2vw;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blogCarrousel__container__card {
+    border-color: var(--courses-carrousel-border-color);
+    border-radius: 10px;
+    background-color: var(--courses-card-background-color);
+    height: 300px;
+    width: calc(90.6vw - var(--scrollbarWidth));
+    box-shadow: var(--courses-card-box-shadow);
+    margin-inline: 1vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.blogCarrousel__container__card:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+    box-shadow: var(--courses-card-box-shadow-hover);
+}
+
+.blogCarrousel__container__card__title {
+    color: var(--body-color);
+    font-size: 1.6vw;
+}
+
+.blogCarrousel__container__card__description {
+    margin-top: 0.1vw;
+    font-size: 1vw;
+}
+
+.blogCarrousel__container__card__text {
+    position: relative;
+    margin-left: 48.5vh;
+    padding-left: 3vh;
+    bottom: 33vh;
+}
+
+.blogCarrousel__container__card__link:hover {
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--body-color);
+}
+
+.blogCarrousel__container__card__image {
+    height: 32.3vh;
+}
+
+.blogCarrousel__container__card__image__logo {
+    width: 49.5vh;
+    height: 32.5vh;
+}

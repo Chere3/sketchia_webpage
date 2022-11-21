@@ -1,0 +1,46 @@
+.tools__container__title {
+    position: relative;
+    padding-left: 7rem;
+    padding-top: 1.4rem;
+    font-size: 2.6rem;
+    color: #4566ffde;
+  }
+  
+  .tools__container {
+    align-content: center;
+    background: #0a2540;
+    left: -12.1vh;
+    position: absolute;
+    align-items: left;
+    height: 689px;
+    width: calc(100.7vw - var(--scrollbarWidth));
+    top: 57rem;
+    border-radius: 363% 61% 32% 94%/45% 4% 0% 0%;
+  }
+  
+  .quote {
+    position: relative;
+      margin: 0rem;
+      padding-top: 3.4rem;
+      font-size: calc(3.2rem - var(--scrollbarWidth));
+      color: #d9e3ed;
+      width: calc(86.6vw - var(--scrollbarWidth));
+  }
+  
+  .quote__item {
+    filter: invert(95%) sepia(4%) saturate(1314%) hue-rotate(180deg) brightness(94%) contrast(97%);
+  }
+  
+  .quote__text {
+    padding-top: 0rem;
+    margin-top: 0rem;
+    padding-left: 10.9rem;
+    padding-right: 11rem;
+    transform: translateY(calc(-5.9rem - var(--scrollbarWidth)));
+  }
+  
+  .quote__author__image {
+    border-radius: 50%;
+    width: calc(11rem - var(--scrollbarWidth));
+    height: calc(10rem - var(--scrollbarWidth));
+  }

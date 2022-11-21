@@ -1,0 +1,151 @@
+.background {
+    background: linear-gradient(115deg, var(--def-gradient-color-1) 0%, var(--def-gradient-color-2) 25%, var(--def-gradient-color-3) 50%, var(--def-gradient-color-4) 75%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Put the logo top left */
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2.4rem;
+    z-index: 1;
+    filter: var(--logo-filter);
+}
+
+.logo_link:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    box-shadow: none;
+    text-shadow: none;
+    background-color: transparent;
+}
+
+.form {
+    margin: 9rem auto;
+    padding: 0px;
+    width: 395px;
+}
+
+.formTitle {
+    font-size: 2.4rem;
+    align-content: center;
+    padding-bottom: 3rem;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--courses-background-color);
+    border-radius: 0.6rem;
+    padding: 2.6rem;
+    align-content: center;
+    box-shadow: var(--login-box-shadow);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+}
+
+.formInput {
+    background-color: var(--courses-background-color);
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    border-radius: 0rem;
+    border-width: 0 0 1px;
+    width: 353px;
+    height: 2rem;
+    color: var(--login-form-text-color);
+    font-family: var(--dm_sans);
+    border-color: var(--login-form-input-bottom-color);
+}
+
+.formInput:focus {
+    transition: ease-in-out 0.4s;
+    border-color: var(--login-form-input-bottom-color-focus);
+    box-shadow: var(--login-form-input-bottom-color-focus-shadow);
+    font-family: var(--dm_sans);
+    outline: none;
+}
+
+.formButton {
+    background-color: var(--button-color);
+    color: var(--resalted-text-color);
+    font-size: 0.8rem;
+    padding: var(--buttons_padding);
+    border-radius: var(--buttons_border_radius);
+    text-decoration: none;
+    border: none;
+    font-family: var(--dm_sans);
+}
+
+.formButton:hover {
+    background-color: var(--login-form-network-button-color);
+    color: var(--login-form-input-bottom-color-focus);
+    transition: ease-in-out 0.4s;
+    cursor: pointer;
+    
+}
+
+.formNetwork {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    border-radius: var(--buttons_border_radius);
+    padding: var(--buttons_padding);
+    background-color: var(--login-form-network-button-color);
+}
+
+.formNetwork:hover {
+    background-color: var(--login-form-network-button-color-hover);
+    color: var(--login-form-network-button-color-text-hover);
+    transition: ease-in-out 0.4s;
+    cursor: pointer;
+}
+
+.formNetworks {
+    border-radius: 0rem;
+    padding-top: 0.3rem;
+}
+
+.formNetwork__image {
+   margin: 0 0.8rem 0rem 0rem;
+}
+
+.formFooter {
+    padding-top: 1.7rem;
+}
+
+.registerText {
+   margin: 0rem;
+}
+
+.registerButton {
+    color: var(--button-color);
+    border-radius: 10px;
+    padding: 0rem .5rem 0rem .1rem;
+}
+
+.registerButton:hover {
+    color: var(--login-form-input-bottom-color-focus);
+    background-color: transparent;
+    box-shadow: none;
+    transition: ease-in-out 0.4s;
+}
+
