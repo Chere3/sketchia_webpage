@@ -27,27 +27,31 @@
 .blogCarrousel__container__card__title {
     color: var(--body-color);
     font-size: 1.6vw;
-    margin-top: 0.1vw;
-    margin-bottom: -1vw;
-    padding-inline: .16vw;
-    text-align: center;
-    position: relative;
-    bottom: 23.5vw;
-    left: -63.1px;
 }
 
 .blogCarrousel__container__card__description {
     margin-top: 0.1vw;
-    font-size: 1.5vw;
-    padding-inline: .16vw;
+    font-size: 1vw;
+}
+
+.blogCarrousel__container__card__text {
     position: relative;
-    padding-left: 33.7vw;
-    top: -24vw;
-    padding-right: 0.3vw
+    margin-left: 48.5vh;
+    padding-left: 3vh;
+    bottom: 33vh;
 }
 
 .blogCarrousel__container__card__link:hover {
     box-shadow: none;
     background-color: transparent;
     color: var(--body-color);
+}
+
+.blogCarrousel__container__card__image {
+    height: 32.3vh;
+}
+
+.blogCarrousel__container__card__image__logo {
+    width: 49.5vh;
+    height: 32.5vh;
 }

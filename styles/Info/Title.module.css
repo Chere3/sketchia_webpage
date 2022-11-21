@@ -1,0 +1,11 @@
+.trademark_logo__container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 2vw;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.trademark_logo__container__logo__image {
+    filter: invert(1)
+}

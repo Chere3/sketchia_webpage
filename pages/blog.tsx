@@ -30,13 +30,16 @@ function BlogCard() {
         <div className={blogCarrouselStyles.blogCarrousel__container__card}>
                     <div className={blogCarrouselStyles.blogCarrousel__container__card__image}>
                         <Image src="/images/not_image_image.png" alt="Logo" width={450} height={302} className={blogCarrouselStyles.blogCarrousel__container__card__image__logo} />
-                    </div>
+                        <div className={blogCarrouselStyles.blogCarrousel__container__card__text}>
                     <div className={blogCarrouselStyles.blogCarrousel__container__card__title}>
                         <h1 className={blogCarrouselStyles.blogCarrousel__container__card__title__text}>Blog #1</h1>
                     </div>
                     <div className={blogCarrouselStyles.blogCarrousel__container__card__description}>
                         <p className={blogCarrouselStyles.blogCarrousel__container__card__description__text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
+                    </div>
+                    </div>
+                    
                 </div>
         </Link>
     )
@@ -63,7 +66,7 @@ function courses() {
     return (
         <div>
             <Head>
-            <title>Blog's</title>
+            <title>Blogs</title>
         </Head>
 
         <AnalyticsScript />
