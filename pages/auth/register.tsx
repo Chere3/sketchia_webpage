@@ -47,6 +47,7 @@ function register(params: any) {
         if (!(email || password)) return showError("Debes de llenar todos los campos");
 
         try {
+
            const data = await createUserWithEmailAndPassword(auth, email, password);
 
            // TODO: Redirect to dashboard
@@ -86,26 +87,25 @@ function register(params: any) {
     async function signInWithSocialNetworks(e: any) {
         e.preventDefault();
 
-        var provider;
-
-        const href = e.target.href;
+        var provider; 
+        const href = e.target?.children[0]?.alt ?? e.target.textContent;
 
         const google = new GoogleAuthProvider();
         const facebook = new FacebookAuthProvider();
         const github = new GithubAuthProvider();
 
-        if (href.includes("google")) provider = google;
-        if (href.includes("facebook")) provider = facebook;
-        if (href.includes("github")) provider = github;
+        if (href.includes("Google")) provider = google;
+        if (href.includes("Facebook")) provider = facebook;
+        if (href.includes("Github")) provider = github;
 
         try {
             const data = await signInWithPopup(auth, provider as AuthProvider, browserPopupRedirectResolver);
             const user = data.user;
 
-            const credential = GoogleAuthProvider.credentialFromResult(data);
+            const classWithoutFunction = provider?.constructor
+            // @ts-ignore
+            const credential = classWithoutFunction?.credentialFromResult(data);
             const token = credential?.accessToken;
-
-            console.log(user, token);
 
             if (token) {
                 router.push("/dashboard");
@@ -116,6 +116,11 @@ function register(params: any) {
             }
         }
         catch (error: any) {
+            if (error.message.includes("auth/popup-closed-by-user")) return showError("Debes de aceptar los permisos para poder iniciar sesión");
+            if (error.message.includes("auth/account-exists-with-different-credential")) return showError("Ya existe una cuenta con este correo electrónico");
+            if (error.message.includes("auth/operation-not-allowed")) return showError("Ha ocurrido un error desconocido, intenta de nuevo más tarde.");
+            if (error.message.includes("auth/user-disabled")) return showError("Esta cuenta ha sido deshabilitada");
+
             return showError(error.message);
         }
     }
@@ -139,7 +144,7 @@ function register(params: any) {
                     <div className={poppins.className}>
                     <div className={loginStyles.formTitle}>Regístrate</div>
                         <form className={loginStyles.formBody} onSubmit={signUpAndGoToDashboard}>
-                        <ReCaptcha ref={recaptchaRef as any} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string} size="invisible" />
+                            <ReCaptcha sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string} ref={recaptchaRef as any} size="invisible" />
                             <div className={loginStyles.formGroup}>
                                 <label htmlFor="email">Correo electrónico</label>
                                 <input type="email" name="email" className={loginStyles.formInput} />

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { indexedDBLocalPersistence, initializeAuth, inMemoryPersistence } from 'firebase/auth';
 import { initializeApp } from 'firebase/app';
 import { AuthProvider, FirebaseAppProvider } from 'reactfire';
+import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 
 function App({ Component, pageProps }: AppProps) {
