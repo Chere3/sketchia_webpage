@@ -19,7 +19,7 @@ Al igual que esta página fue creada con el motivo de crear una página y result
 
 > **¿Qué tecnologías se usan en esta página?**
 
-[![Tecnologías](https://skillicons.dev/icons?i=aws,cloudflare,react,next,nodejs,supabase,express,vercel)]("/")
+[![Tecnologías](https://skillicons.dev/icons?i=aws,cloudflare,react,next,nodejs,firebase,express,vercel)]("/")
 
 [![My Skills](https://skillicons.dev/icons?i=ts,css)](https://skillicons.dev)
 
