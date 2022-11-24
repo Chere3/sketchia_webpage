@@ -77,6 +77,9 @@ html {
   --logo-global-footer-filter: var(--logo-global-header-filter);
 
   --courses-card-background-color: var(--courses-background-color);
+
+  --login-form-input-bottom-color-error: #ff0000;
+  --login-form-input-bottom-color-error-shadow: 0 1px 0 #ff0000;  
 }
 
 
