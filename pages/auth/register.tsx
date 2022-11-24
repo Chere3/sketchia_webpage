@@ -5,6 +5,10 @@ import { Poppins } from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { AnalyticsScript } from "..";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useAuth } from "reactfire";
+import { useCallback } from "react";
+import { useRouter } from "next/router";
 
 const poppins = Poppins({
     preload: true,
@@ -16,6 +20,47 @@ const poppins = Poppins({
 
 
 function register(params: any) {
+
+    const auth = useAuth();
+    const router = useRouter();
+
+    async function showError(e: any) {
+        const error = document.getElementsByClassName("auth_formGroup__D6vmm");
+
+        error[0].innerHTML = e;
+        // put button back to normal
+        const button = document.getElementsByClassName("auth_formButton__2Z7Zt");
+
+
+    }
+    
+    async function signUp(e: any) {
+        
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        try {
+           const data = await createUserWithEmailAndPassword(auth, email, password);
+
+           // TODO: Redirect to dashboard
+            return data;
+        } catch (error: any) {
+           if (String(error.message).includes("auth/email-already-in-use")) return showError("El correo electrónico ya está en uso");
+        }
+    }
+    
+    async function signUpAndGoToDashboard(e: any) {
+
+        e.preventDefault();
+
+        const data = await signUp(e);
+
+        if (data) {
+            router.push("/dashboard");
+        }        
+    }
+
+
 
     return (
         <div>
@@ -34,7 +79,7 @@ function register(params: any) {
                 <div className={loginStyles.form__container}>
                 <div className={poppins.className}>
                 <div className={loginStyles.formTitle}>Regístrate</div>
-                    <form className={loginStyles.formBody}>
+                    <form className={loginStyles.formBody} onSubmit={signUpAndGoToDashboard}>
                         <div className={loginStyles.formGroup}>
                             <label htmlFor="email">Correo electrónico</label>
                             <input type="email" name="email" className={loginStyles.formInput} />
@@ -62,8 +107,8 @@ function register(params: any) {
 
                             <Link href="#">
                             <div className={loginStyles.formNetwork}>
-                                <Image src="/images/items/discord_logo.png" alt="Discord" height={20} width={26} className={loginStyles.formNetwork__image} />
-                                <span>Regístrate con Discord</span>
+                                <Image src="/images/items/github_logo.png" alt="Github" height={20} width={26} className={loginStyles.formNetwork__image} />
+                                <span>Regístrate con Github</span>
                                 </div>
                                 </Link>
                         </div>

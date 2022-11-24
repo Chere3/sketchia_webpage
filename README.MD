@@ -27,7 +27,7 @@ Al igual que esta página fue creada con el motivo de crear una página y result
 
 > **¿Con qué sistemas cuenta esta página?**
 
-- `Sistema de autenticación con correo, Google, Discord, y Facebook.`
+- `Sistema de autenticación con correo, Google, Github, y Facebook.`
 - `Sistema de roles dentro de la plataforma.`
 - `Sistema de comentarios.`
 - `Sistema de cursos y blogs.`

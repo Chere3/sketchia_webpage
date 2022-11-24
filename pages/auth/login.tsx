@@ -4,6 +4,9 @@ import { Poppins } from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { AnalyticsScript } from "..";
+import { useAuth } from "reactfire";
+import { useCallback } from "react";
+import {signInWithEmailAndPassword} from "firebase/auth";
 
 const poppins = Poppins({
     preload: true,
@@ -16,6 +19,23 @@ const poppins = Poppins({
 
 
 function Login() {
+
+    function signIn() {
+        const auth = useAuth();
+        const signIn = useCallback(async (email: string, password: string) => {
+            try {
+                console.log("Signing in...");
+                await signInWithEmailAndPassword(auth, email, password
+                );
+            } catch (error) {
+                console.log(error);
+            }
+        }, [auth]);
+
+        return signIn;
+    }
+
+
     return (
         <div>
             <Head>
@@ -33,7 +53,7 @@ function Login() {
                 <div className={loginStyles.form__container}>
                 <div className={poppins.className}>
                 <div className={loginStyles.formTitle}>Inicia sesión</div>
-                    <form className={loginStyles.formBody}>
+                    <form className={loginStyles.formBody} onSubmit={signIn}>
                         <div className={loginStyles.formGroup}>
                             <label htmlFor="email">Correo electrónico</label>
                             <input type="email" name="email" className={loginStyles.formInput} />
@@ -61,8 +81,8 @@ function Login() {
 
                             <Link href="#">
                             <div className={loginStyles.formNetwork}>
-                                <Image src="/images/items/discord_logo.png" alt="Discord" height={20} width={26} className={loginStyles.formNetwork__image} />
-                                <span>Iniciar sesión con Discord</span>
+                                <Image src="/images/items/github_logo.png" alt="Github" height={26} width={26} className={loginStyles.formNetwork__image} />
+                                <span>Iniciar sesión con Github</span>
                                 </div>
                                 </Link>
                         </div>
