@@ -78,7 +78,7 @@
   
   .courses__carrousel__container__card__text__description {
     margin-top: 2px;
-    font-size: calc(2.7rem - var(--scrollbarWidth));
+    font-size: calc(3.3rem - var(--scrollbarWidth))
   }
   
   .courses__carrousel__container__card__text__title, .courses__carrousel__container__card__text__description {

@@ -12,10 +12,12 @@
     border-color: var(--courses-carrousel-border-color);
     border-radius: 10px;
     background-color: var(--courses-card-background-color);
-    height: 480px;
+    height: 417px;
     width: calc(16.6vw - var(--scrollbarWidth));
     box-shadow: var(--courses-card-box-shadow);
     margin-inline: 1vw;
+    font-family: var(--dm_sans);
+    cursor: pointer;
 }
 
 .coursesCarrousel__container__card:hover {
@@ -32,14 +34,14 @@
 
 .coursesCarrousel__container__card__title {
     color: var(--courses-card-title-color);
-    font-size: 0.9vw;
+    font-size: 1.5vw;
     margin-top: 0.1vw;
     margin-bottom: -1vw;
     padding-inline: .16vw;
 }
 
 .coursesCarrousel__container__card__description {
-    margin-top: 0.1vw;
+    margin-top: 1.1vw;
     font-size: 0.9vw;
     padding-inline: .16vw;
 }

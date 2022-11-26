@@ -7,6 +7,7 @@ import Link from "next/link";
 import titleStyles from "../styles/courses/Title.module.css"
 import localFont from "@next/font/local";
 import coursesCarrouselStyles from "../styles/courses/Courses.module.css";
+import Router from "next/router";
 
 const poppins = Poppins({
     weight: "700",
@@ -24,10 +25,12 @@ const extrafett = localFont({
     preload: true,
   });
 
-function CourseCard() {
+function CourseCard(href?: string, title?: string, description?: string, image?: string) {
     return (
-        <Link href="/courses/1" className={coursesCarrouselStyles.coursesCarrousel__container__card__link}>
-        <div className={coursesCarrouselStyles.coursesCarrousel__container__card}>
+        <div className={coursesCarrouselStyles.coursesCarrousel__container__card} onClick={(e) => {
+            // @ts-ignore
+            Router.push(e.target.id)
+        }}>
                     <div className={coursesCarrouselStyles.coursesCarrousel__container__card__image}>
                         <Image src="/images/not_image_image.png" alt="Logo" width={290} height={168} className={coursesCarrouselStyles.coursesCarrousel__container__card__image__logo} />
                     </div>
@@ -38,7 +41,6 @@ function CourseCard() {
                         <p className={coursesCarrouselStyles.coursesCarrousel__container__card__description__text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nisl nunc aliquet nisl, quis aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nunc aliquet nisl, quis aliquam nisl nisl sit amet nisl.</p>
                     </div>
                 </div>
-        </Link>
     )
 }
 
@@ -47,19 +49,67 @@ function CoursesCarrousel() {
         <div className={poppins.className}>
         <main className={coursesCarrouselStyles.coursesCarrousel}>
             <div className={coursesCarrouselStyles.coursesCarrousel__container}>
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
+                {CourseCard()}
+                {CourseCard()}
+                {CourseCard()}
+                {CourseCard()}
+                {CourseCard()}
                     </div>
                     </main>
                     </div>
     )
 }
 
+async function getCoursesData() {
+    const res = await fetch(`https://api.sketchia.com.mx/v0/courses`);
+    const data = (await res.json()).courses;
+
+    const firstContainer = document.getElementsByClassName("Courses_coursesCarrousel__container__zcwxp");
+
+    const array = [];
+
+    for (let i = 0; i < firstContainer.length; i++) {
+        array.push(firstContainer[i]);
+    }
+
+    
+    const arrayOfChildren = [];
+
+    for (let i = 0; i < array.length; i++) {
+        arrayOfChildren.push(array[i].children);
+    }
+    // assign the href course id to the link
+
+    var a = 0;
+
+    for (let i = 0; i < arrayOfChildren.length; i++) {
+        for (let j = 0; j < arrayOfChildren[i].length; j++) {
+            // @ts-ignore
+            firstContainer.item(i).children[j].children[1].innerHTML = data[a].data.titulo;
+            // @ts-ignore
+            firstContainer.item(i).children[j].children[2].innerHTML = data[a].data.description;
+            // @ts-ignore
+            firstContainer.item(i).children[j].children[0].children[0].srcset = data[a].data.imagen ?? "/images/not_image_image.png";
+            // @ts-ignore
+            firstContainer.item(i).children[j].id = `/courses/${data[a].id}`;
+            // @ts-ignore
+            firstContainer.item(i).children[j].children[0].id = `/courses/${data[a].id}`;
+            // @ts-ignore
+            firstContainer.item(i).children[j].children[1].id = `/courses/${data[a].id}`;
+            // @ts-ignore
+            firstContainer.item(i).children[j].children[2].id = `/courses/${data[a].id}`;
+             a++
+        }
+    }
+
+    // assign the data to the elements
+
+
+}
+
 
 function courses() {
+    getCoursesData();
     return (
         <div>
             <Head>
