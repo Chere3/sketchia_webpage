@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ReCaptcha from 'react-google-recaptcha'
 import { AnalyticsScript } from "..";
-import { AuthProvider, browserPopupRedirectResolver, createUserWithEmailAndPassword, FacebookAuthProvider, getRedirectResult, GithubAuthProvider, GoogleAuthProvider, signInWithPopup, signInWithRedirect, UserCredential } from "firebase/auth";
+import { AuthProvider, browserPopupRedirectResolver, createUserWithEmailAndPassword, FacebookAuthProvider, getRedirectResult, GithubAuthProvider, GoogleAuthProvider, sendEmailVerification, signInWithPopup, signInWithRedirect, UserCredential } from "firebase/auth";
 import { useAuth } from "reactfire";
 import { useRouter } from "next/router";
 import { createRef } from "react";
@@ -49,6 +49,7 @@ function register(params: any) {
         try {
 
            const data = await createUserWithEmailAndPassword(auth, email, password);
+           await sendEmailVerification(data.user)
 
            // TODO: Redirect to dashboard
             return data;
