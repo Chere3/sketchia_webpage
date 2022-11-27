@@ -40,9 +40,9 @@ function agotado() {
             </div>
         </main>
         <div className={courseStyles.globalHeader__container__title}>
-            <Image src="/images/items/perro.png" height={300} width={300} alt="Perro" className={courseStyles.perro}/>
+            <Image src="/images/items/R.png" height={300} width={300} alt="Perro" className={courseStyles.perro}/>
             <h1 className={`${courseStyles.title__container__title__h1} ${poppins.className}`}>¡Lo sentimos!</h1>
-            <h2 className={`${courseStyles.title__container__title__h2} ${poppins.className}`}>Esta página actualmente se encuentra en construcción, ¡vuelve más tarde para que no te pierdas las inaguración!</h2>
+            <h2 className={`${courseStyles.title__container__title__h2} ${poppins.className}`}>Recibimos tantas solicitudes para unirse a este curso que tuvimos que agotar existencias, intenta de nuevo en algunos días.</h2>
         </div>
         </main>
     )

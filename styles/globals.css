@@ -105,6 +105,10 @@ a:hover {
 /* Change scrollbar design */
 
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 
 a {
@@ -176,6 +180,19 @@ h1 {
   --global-header-text-color: rgb(0, 0, 0);
 
   --logo-global-header-filter: invert(0);
+
+  --dashboard-background-color: #1f2021;
+  --dashboard-box-shadow: #ffffff5c 0px 0px 40px;
+  --dashboard-carrousel-text-color: #ffffff;
+  --dashboard-card-border-color: #001b91;
+  --dashboard-card-background-color: #000000;
+  --dashboard-card-box-shadow: #ffffff1a 0px 0px 4px;
+  --dashboard-card-box-border: 1px solid var(--dashboard-box-border-color);
+  --dashboard-box-border-color: #eaeaea2e;
+  --dashboard-card-box-shadow-hover: #ffffff5c 0px 0px 40px;
+  --dashboard-card-title-color: #2641bbde;
+  --dashboard-card-title-color-hover: #ffffff;
+  
 
   }
 }

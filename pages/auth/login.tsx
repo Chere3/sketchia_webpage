@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnalyticsScript } from "..";
 import { useAuth } from "reactfire";
-import { createRef, useCallback } from "react";
+import { createRef, useCallback, useEffect } from "react";
 import {AuthProvider, browserPopupRedirectResolver, FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup} from "firebase/auth";
 import { Router, useRouter } from "next/router";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -132,10 +132,13 @@ function Login() {
             return showError("Ha ocurrido un error desconocido, intenta de nuevo más tarde.");
     }
     }
+    
+    useEffect(() => {
+        if ((auth.currentUser)) {
+            router.push("/dashboard");
+        }
+    }, [auth.currentUser]);
 
-
-
-    if (!auth?.currentUser) {
         return (
             <div>
                 <Head>
@@ -198,9 +201,6 @@ function Login() {
                     </div>               
             </div>
         );
-    } else {
-    router.push("/dashboard");
-    }
 
     
 }

@@ -1,0 +1,103 @@
+.settings__main {
+    position: relative;
+    padding-block: 20vh;
+    padding-inline: 8vh;
+}
+
+.settings__main__container__title__text {
+    font-size: 5.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.settings__main__container__title {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2vh;
+    border-color: var(--courses-card-border-color);
+    border-bottom: 1px solid;
+}
+
+.settings__main__container__subtitle {
+    font-size: 2.55rem;
+}
+
+.settings__main__container__content__container__info {
+    display: flex;
+    height: 10rem;
+}
+
+.settings__main__container__content__container__info__photo__sl {
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+}
+
+.settings__main__container__content__container__info__photo__container__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    padding-inline: 3rem;
+    align-self: center;
+}
+
+.settings__main__container__content__container__info__photo__text {
+    padding-block: 1.2rem;
+    width: 20rem
+}
+
+.settings__main__container__content__container__info__photo__container__buttons__button {
+    margin-block: 1rem;
+    background-color: var(--body-color);
+    color: var(--background-color);
+    padding: var(--buttons_padding);
+    border-radius: var(--buttons_border_radius);
+    font-family: var(--poppins);
+    border: none;
+}
+
+.settings__main__container__content__container__info__photo__container__buttons__button:hover {
+    background-color: var(--background-color);
+    color: var(--body-color);
+    border: 1px solid var(--body-color);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.settings__main__container__content {
+    padding-bottom: 10rem;
+}
+
+
+.delete__button {
+    background-color: #de0303;
+}
+
+.settings__main__container__content__container__info__forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings__main__container__content__container__info__label {
+    margin: 0;
+    padding: 0;
+}
+
+.settings__main__container__content__container__info__input {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    border-radius: 0rem;
+    margin-bottom: 2rem;
+    border-width: 0 0 1px;
+    width: 353px;
+    height: 2rem;
+    color: var(--login-form-text-color);
+    border-color: var(--login-form-input-bottom-color);
+}
+
+.settings__main__container__content__container__info__input:focus {
+    transition: ease-in-out 0.4s;
+    border-color: var(--login-form-input-bottom-color-focus);
+    box-shadow: var(--login-form-input-bottom-color-focus-shadow);
+    outline: none;
+}

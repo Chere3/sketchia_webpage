@@ -148,8 +148,7 @@ async function getCourseData() {
       <main className={headerStyles.header}>
       <AnalyticsScript />
         <Script
-          src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z"
-          strategy="lazyOnload"
+          src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js"
           onLoad={async () => {
             // @ts-ignore
             var gradient = new Gradient();

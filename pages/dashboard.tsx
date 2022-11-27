@@ -1,13 +1,14 @@
-import localFont from "@next/font/local";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { useAuth } from "reactfire";
+import { Open_Sans, Poppins } from "@next/font/google";
+import { AnalyticsScript } from ".";
+
+
 import titleStyles from "../styles/dashboard/Title.module.css";
 import dashboardStyles from "../styles/dashboard/Dashboard.module.css";
 import styles from "../styles/interface/Global.module.css";
-import { useAuth } from "reactfire";
-import { Open_Sans, Poppins } from "@next/font/google";
 import Head from "next/head";
-import { AnalyticsScript } from ".";
 import Link from "next/link";
 import Image from "next/image";
 
