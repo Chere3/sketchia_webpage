@@ -92,6 +92,11 @@ html {
   --dashboard-card-box-shadow-hover: #0000005c 0px 0px 40px;
   --dashboard-card-title-color: #2d52fdde;
   --dashboard-card-title-color-hover: #ffffff;
+
+  --course-title-container-border-color: #0000001c;
+  --course-border-item-color: var(--course-title-container-border-color)
+  --course-border-item-color-background-hover: var(--course-border-item-color);
+  --course-loading-color: #ffffffdc;
 }
 
 
@@ -193,6 +198,10 @@ h1 {
   --dashboard-card-title-color: #2641bbde;
   --dashboard-card-title-color-hover: #ffffff;
   
+  --course-title-container-border-color: #ffffff1c;
+  --course-border-item-color: var(--course-title-container-border-color)
+  --course-border-item-color-background-hover: var(--course-border-item-color);
+  --course-loading-color: #000000dc;
 
   }
 }

@@ -219,7 +219,7 @@ function course() {
             <div id="loading" className={courseModule.loading}>
                 <div className={`${courseModule.loading__container} ${open.className}`}>
                     <Image src="/sketchia.svg" width={400} height={100} alt={"Logo"} />
-                    <h1>Cargando página espera...</h1>
+                    <h1>Cargando curso espera...</h1>
                 </div>
             </div>
 

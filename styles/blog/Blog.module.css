@@ -17,17 +17,17 @@
     left: 0;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
-    border-bottom-left-radius: 37%;
-    border-bottom-right-radius: 37%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 85%;
     z-index: auto;
 }
 
 .title__container__title {
     position: relative;
-    text-align: center;
+    text-align: left;
     margin-block: auto;
-    padding-top: 30rem;
-    padding-inline: 33vh;
+    padding-top: 34rem;
+    padding-inline: 7vh;
     font-size: 8vh;
 }
 
@@ -52,8 +52,8 @@
 .title__container__description__text {
     font-size: 2.5vh;
     font-weight: 700;
-    margin-inline: 37rem;
-    margin-top: -20rem;
+    padding-inline: 7vh;
+    margin-top: -24rem;
     color: var(--def-text-color);
     text-shadow: 0 0 0.5rem var(--def-text-color);
 }
@@ -192,4 +192,15 @@
 .loading__text {
     font-size: 2rem;
     font-weight: 700;
+}
+
+.text__container__text__markdown {
+    padding-inline: 7vh;
+}
+
+.text__container__text__markdown__h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-block: 0;
+    margin-inline: 0;
 }
