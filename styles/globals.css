@@ -77,6 +77,26 @@ html {
   --logo-global-footer-filter: var(--logo-global-header-filter);
 
   --courses-card-background-color: var(--courses-background-color);
+
+  --login-form-input-bottom-color-error: #ff0000;
+  --login-form-input-bottom-color-error-shadow: 0 1px 0 #ff0000; 
+  
+  --dashboard-background-color: #f6f9fc;
+  --dashboard-box-shadow: #0000005c 0px 0px 40px;
+  --dashboard-carrousel-text-color: #000000;
+  --dashboard-card-border-color: #0020b0;
+  --dashboard-card-background-color: #fafafa;
+  --dashboard-card-box-shadow: 0 4px 6px rgb(0 0 0 / 4%);
+  --dashboard-card-box-border: 1px solid var(--dashboard-box-border-color);
+  --dashboard-box-border-color: #eaeaea;
+  --dashboard-card-box-shadow-hover: #0000005c 0px 0px 40px;
+  --dashboard-card-title-color: #2d52fdde;
+  --dashboard-card-title-color-hover: #ffffff;
+
+  --course-title-container-border-color: #0000001c;
+  --course-border-item-color: var(--course-title-container-border-color)
+  --course-border-item-color-background-hover: var(--course-border-item-color);
+  --course-loading-color: #ffffffdc;
 }
 
 
@@ -89,6 +109,10 @@ a:hover {
 
 /* Change scrollbar design */
 
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 
 
@@ -161,6 +185,23 @@ h1 {
   --global-header-text-color: rgb(0, 0, 0);
 
   --logo-global-header-filter: invert(0);
+
+  --dashboard-background-color: #1f2021;
+  --dashboard-box-shadow: #ffffff5c 0px 0px 40px;
+  --dashboard-carrousel-text-color: #ffffff;
+  --dashboard-card-border-color: #001b91;
+  --dashboard-card-background-color: #000000;
+  --dashboard-card-box-shadow: #ffffff1a 0px 0px 4px;
+  --dashboard-card-box-border: 1px solid var(--dashboard-box-border-color);
+  --dashboard-box-border-color: #eaeaea2e;
+  --dashboard-card-box-shadow-hover: #ffffff5c 0px 0px 40px;
+  --dashboard-card-title-color: #2641bbde;
+  --dashboard-card-title-color-hover: #ffffff;
+  
+  --course-title-container-border-color: #ffffff1c;
+  --course-border-item-color: var(--course-title-container-border-color)
+  --course-border-item-color-background-hover: var(--course-border-item-color);
+  --course-loading-color: #000000dc;
 
   }
 }

@@ -1,0 +1,195 @@
+
+
+.title__container {
+    position: relative;
+    margin-block: 10vh;
+}
+
+.title__background {
+    background: linear-gradient(115deg, var(--def-gradient-color-1) 0%, var(--def-gradient-color-2) 25%, var(--def-gradient-color-3) 50%, var(--def-gradient-color-4) 75%);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 69vh;
+    width: 100vw;
+    position: relative;
+    top: -42vh;
+    left: 0;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 37%;
+    border-bottom-right-radius: 37%;
+    z-index: auto;
+}
+
+.title__container__title {
+    position: relative;
+    text-align: center;
+    margin-block: auto;
+    padding-top: 30rem;
+    padding-inline: 33vh;
+    font-size: 8vh;
+}
+
+.title__container__title__h1 {
+    font-size: 8vh;
+    font-weight: 700;
+    text-align: center;
+    margin-top: -2rem;
+    color: var(--def-text-color);
+    text-shadow: 0 0 0.5rem var(--def-text-color);
+}
+
+.title__container__title__h2 {
+    font-size: 4vh;
+    font-weight: 700;
+    text-align: center;
+    margin-inline: 37rem;
+    color: var(--def-text-color);
+    text-shadow: 0 0 0.5rem var(--def-text-color);
+}
+
+.title__container__description__text {
+    font-size: 2.5vh;
+    font-weight: 700;
+    margin-inline: 37rem;
+    margin-top: -20rem;
+    color: var(--def-text-color);
+    text-shadow: 0 0 0.5rem var(--def-text-color);
+}
+
+.title__container {
+    position: relative;
+    border-block: 0rem;
+    margin-block: 10vh;
+    border-bottom: 1px solid;
+    padding-bottom: 50px;
+    border-color: var(--course-title-container-border-color);
+}
+
+.title__container__description {
+    border-bottom: 1px solid var(--def-text-color);
+}
+
+.title__info__course {
+    text-align: -webkit-center;
+}
+
+.title__container__button {
+    padding: var(--buttons_padding);
+    color: var(--background-color);
+    background-color: var(--body-color);
+    border-radius: var(--buttons_border_radius);
+    width: 14rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.title__container__button:hover {
+    box-shadow: var(--courses-card-box-shadow-hover);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.perro {
+    font-size: 8vh;
+    font-weight: 700;
+    margin-top: 7rem;
+    margin-inline: 50rem;
+}
+
+
+.course__info__materials__container__title__text {
+    text-align: center;
+    font-size: 3rem;
+    padding-block: 1.1vh;
+}
+
+/* Make a table with the same width as the container and add a border */
+.course__info__materials__container__list__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 58vh;
+    border: 1px solid var(--course-title-container-border-color);
+    padding: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.course__info__materials__container__list__item:hover {
+    background-color: var(--course-border-utem-background-hover);
+    cursor: pointer;
+}
+
+.course__info__materials__container__list__item__text__space {
+    margin-inline: 2rem;
+    width: 79.7vh;
+}
+
+.course__info__materials__container__list__item__text__description {
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+.course__info__episodes__container__title__text {
+    text-align: center;
+    font-size: 3rem;
+    padding-block: 1.1vh;
+    padding-top: 19vh;
+}
+
+.course__info__episodes__container__list__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 58vh;
+    font-size: 0.8rem;
+    border-radius: 1vh;
+    height: 6rem;
+    background-color: var(--courses-background-color);
+}
+
+.course__info__episodes__container__list__item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: var(--courses-card-box-shadow-hover);
+    transition: ease-in 0.2s;
+}
+
+
+.course__info__episodes__container__list__item__text__description {
+    margin-inline: 1rem;
+}
+
+.course__info__comments {
+    margin-inline: 58vh;
+    margin-top: 5vh;
+}
+
+.course__info__comments__title {
+    font-size: 3rem;
+    padding-block: 1.1vh;
+    padding-top: 19vh;
+    text-align: center;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: var(--course-loading-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.loading__text {
+    font-size: 2rem;
+    font-weight: 700;
+}

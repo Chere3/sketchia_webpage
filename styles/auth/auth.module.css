@@ -81,6 +81,13 @@
     outline: none;
 }
 
+.formInput__error {
+    color: var(--login-form-input-error-color);
+    font-size: 1.2rem;
+    font-family: var(--dm_sans);
+    margin-top: 0.4rem;
+}
+
 .formButton {
     background-color: var(--button-color);
     color: var(--resalted-text-color);

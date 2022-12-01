@@ -11,6 +11,7 @@ import coursesStyles from "../styles/home/courses.module.css";
 import quotesStyles from "../styles/home/quotes.module.css";
 import join_usStyles from "../styles/home/join_us.module.css";
 import titleStyles from "../styles/home/title.module.css";
+import Router from "next/router";
 
 const extrafett = localFont({
   src: "../public/fonts/sohne-extrafett-webfont.woff2",
@@ -22,7 +23,7 @@ const extrafett = localFont({
 const dm_sans = Poppins({
   variable: "--dm_sans",
   preload: true,
-  weight: "600",
+  weight: "700",
   style: "normal",
   subsets: ["latin"],
 });
@@ -67,7 +68,71 @@ return (
 )
 };
 
+function CourseCard(image?: string, title?: string, description?: string) {
+  return (
+    <div className={coursesStyles.courses__carrousel__container__card}><div className={coursesStyles.courses__carrousel__container__card__image}><Image src="/images/not_image_image.png" alt="Foto del curso" width={276} height={168} className={coursesStyles.courses__carrousel__container__card__image__img}/>
+                  </div>
+                  <div className={coursesStyles.courses__carrousel__container__card__text}>
+                    <div className={dm_sans.className}>
+                      <h1 className={coursesStyles.courses__carrousel__container__card__text__title}>
+                        "Curso 1"
+                      </h1>
+                      <p className={coursesStyles.courses__carrousel__container__card__text__description}>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nunc aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nisl vitae ultricies lacinia, nisl nunc aliquet nisl, eget aliquam nisl nisl eu nunc."
+                      </p>
+                      </div>
+                  </div>
+                  </div>
+  )
+}
+
+function CourseCarrousel() {
+  return (
+    <div className={coursesStyles.courses__carrousel}>
+      <div className={coursesStyles.courses__carrousel__container}>
+        {CourseCard("/images/image_not_image.png", "Curso 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl.")}
+        {CourseCard("/images/image_not_image.png", "Curso 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl.")}
+        {CourseCard("/images/image_not_image.png", "Curso 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl.")}
+        {CourseCard("/images/image_not_image.png", "Curso 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl.")}
+        {CourseCard("/images/image_not_image.png", "Curso 5", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl. Sed euismod, nunc vel ultricies lacinia, nisl nunc aliquet nisl, eget ultricies nisl lorem eget nisl.")}
+        </div>
+    </div>
+  )
+}
+
+async function getCourseData() {
+  const res = await fetch(`https://api.sketchia.com.mx/v0/courses?limit=6`);
+  const data = (await res.json()).courses;
+
+  // replace the data of the course with the data from the API
+  const container = document.getElementsByClassName("courses_courses__carrousel__container__TVbyb");
+  const cards = container[1].children;
+
+  console.log(data)
+
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const image = card.children[0].children[0];
+    const title = card.children[1].children[0].children[0];
+    const description = card.children[1].children[0].children[1];
+
+    // @ts-ignore
+    image.srcset = data[i]?.data?.imagen;
+    title.innerHTML = data[i]?.data.titulo;
+    description.innerHTML = data[i]?.data.description;
+    // on click, redirect to the course page
+
+    // @ts-ignore
+    card.onclick = () => {
+      Router.push(`/courses/${data[i].id}`);
+    }
+
+  }
+}
+
+
  function Home() {
+  getCourseData();
   return (
     <div className={titleStyles.container}>
       <Head>
@@ -83,9 +148,8 @@ return (
       <main className={headerStyles.header}>
       <AnalyticsScript />
         <Script
-          src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js?t=2022-11-04T17%3A54%3A05.903Z"
-          strategy="lazyOnload"
-          onLoad={() => {
+          src="https://pyywzoboulzbhbnihayt.supabase.co/storage/v1/object/public/recursos/gradient.js"
+          onLoad={async () => {
             // @ts-ignore
             var gradient = new Gradient();
             gradient.initGradient(".title_gradient_canvas__Et8AW");
@@ -220,216 +284,7 @@ return (
             </div>
             <div className={coursesStyles.courses__carrousel}>
               <div className={coursesStyles.courses__carrousel__container}>
-                <div
-                  className={coursesStyles.courses__carrousel__container__card}
-                >
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__image
-                    }
-                  >
-                    <Image
-                      src="/images/not_image_image.png"
-                      alt="Foto del curso"
-                      width={276}
-                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
-                    />
-                  </div>
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__text
-                    }
-                  >
-                    <div className={dm_sans.className}>
-                      <h1
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__title
-                        }
-                      >
-                        Curso #1
-                      </h1>
-                      <p
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__description
-                        }
-                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className={coursesStyles.courses__carrousel__container__card}
-                >
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__image
-                    }
-                  >
-                    <Image
-                      src="/images/not_image_image.png"
-                      alt="Foto del curso"
-                      width={276}
-                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
-                    />
-                  </div>
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__text
-                    }
-                  >
-                    <div className={dm_sans.className}>
-                      <h1
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__title
-                        }
-                      >
-                        Curso #1
-                      </h1>
-                      <p
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__description
-                        }
-                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className={coursesStyles.courses__carrousel__container__card}
-                >
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__image
-                    }
-                  >
-                    <Image
-                      src="/images/not_image_image.png"
-                      alt="Foto del curso"
-                      width={276}
-                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
-                    />
-                  </div>
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__text
-                    }
-                  >
-                    <div className={dm_sans.className}>
-                      <h1
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__title
-                        }
-                      >
-                        Curso #1
-                      </h1>
-                      <p
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__description
-                        }
-                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className={coursesStyles.courses__carrousel__container__card}
-                >
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__image
-                    }
-                  >
-                    <Image
-                      src="/images/not_image_image.png"
-                      alt="Foto del curso"
-                      width={276}
-                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
-                    />
-                  </div>
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__text
-                    }
-                  >
-                    <div className={dm_sans.className}>
-                      <h1
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__title
-                        }
-                      >
-                        Curso #1
-                      </h1>
-                      <p
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__description
-                        }
-                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className={coursesStyles.courses__carrousel__container__card}
-                >
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__image
-                    }
-                  >
-                    <Image
-                      src="/images/not_image_image.png"
-                      alt="Foto del curso"
-                      width={276}
-                      height={168} className={coursesStyles.courses__carrousel__container__card__image__img}
-                    />
-                  </div>
-                  <div
-                    className={
-                      coursesStyles.courses__carrousel__container__card__text
-                    }
-                  >
-                    <div className={dm_sans.className}>
-                      <h1
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__title
-                        }
-                      >
-                        Curso #1
-                      </h1>
-                      <p
-                        className={
-                          coursesStyles.courses__carrousel__container__card__text__description
-                        }
-                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+               <CourseCarrousel />
               </div>
             </div>
           </div>

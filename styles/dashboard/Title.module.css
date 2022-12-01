@@ -1,0 +1,31 @@
+.dashboard__title {
+    font-size: 3rem;
+}
+
+.dashboard__title__background {
+    background: linear-gradient(115deg, var(--def-gradient-color-1) 0%, var(--def-gradient-color-2) 25%, var(--def-gradient-color-3) 50%, var(--def-gradient-color-4) 75%);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 69vh;
+    width: 100vw;
+    position: relative;
+    top: -42vh;
+    left: 0;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 37%;
+    border-bottom-right-radius: 37%;
+    z-index: auto;
+}
+
+.dashboard__title__container {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-top: 53vh;
+    padding-bottom: 3vh;
+    color: var(--background-color);
+}
+
+

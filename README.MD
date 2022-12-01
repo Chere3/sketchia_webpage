@@ -19,7 +19,7 @@ Al igual que esta página fue creada con el motivo de crear una página y result
 
 > **¿Qué tecnologías se usan en esta página?**
 
-[![Tecnologías](https://skillicons.dev/icons?i=aws,cloudflare,react,next,nodejs,supabase,express,vercel)]("/")
+[![Tecnologías](https://skillicons.dev/icons?i=aws,cloudflare,react,next,nodejs,firebase,express,vercel)]("/")
 
 [![My Skills](https://skillicons.dev/icons?i=ts,css)](https://skillicons.dev)
 
@@ -27,7 +27,7 @@ Al igual que esta página fue creada con el motivo de crear una página y result
 
 > **¿Con qué sistemas cuenta esta página?**
 
-- `Sistema de autenticación con correo, Google, Discord, y Facebook.`
+- `Sistema de autenticación con correo, Google, Github, y Facebook.`
 - `Sistema de roles dentro de la plataforma.`
 - `Sistema de comentarios.`
 - `Sistema de cursos y blogs.`
