@@ -7,6 +7,7 @@ import Link from "next/link";
 import titleStyles from "../styles/blog/Title.module.css"
 import localFont from "@next/font/local";
 import blogCarrouselStyles from "../styles/blog/Blogs.module.css";
+import Router from "next/router";
 
 const poppins = Poppins({
     weight: "700",
@@ -26,9 +27,12 @@ const extrafett = localFont({
 
 function BlogCard() {
     return (
-        <Link href="/blog/1" className={blogCarrouselStyles.blogCarrousel__container__card__link}>
         <div className={blogCarrouselStyles.blogCarrousel__container__card}>
-                    <div className={blogCarrouselStyles.blogCarrousel__container__card__image}>
+                    <div className={blogCarrouselStyles.blogCarrousel__container__card__image} onClick={
+                        (e: any) => {
+                            Router.push(`/blog/${e.target.id}`)
+                        }
+                    }>
                         <Image src="/images/not_image_image.png" alt="Logo" width={450} height={302} className={blogCarrouselStyles.blogCarrousel__container__card__image__logo} />
                         <div className={blogCarrouselStyles.blogCarrousel__container__card__text}>
                     <div className={blogCarrouselStyles.blogCarrousel__container__card__title}>
@@ -41,7 +45,6 @@ function BlogCard() {
                     </div>
                     
                 </div>
-        </Link>
     )
 }
 
@@ -53,16 +56,39 @@ function BlogCarrousel() {
                 <BlogCard />
                 <BlogCard />
                 <BlogCard />
-                <BlogCard />
-                <BlogCard />
                     </div>
                     </main>
                     </div>
     )
 }
 
+async function getBlogsData() {
+    const res = await fetch('https://api.sketchia.com.mx/v0/blogs')
+    const data = (await res.json()).blogs
+
+    const container = document.getElementsByClassName("Blogs_blogCarrousel__container__cPlTV");
+    const cards = container[0].children;
+
+    for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        const image = card.children[0].children[0];
+        const title = card.children[0].children[1].children[0].children[0];
+        const description = card.children[0].children[1].children[1].children[0];
+
+        // @ts-ignore
+        image.srcset = data[i]?.data?.image ?? "/images/not_image_image.png";
+        title.innerHTML = data[i]?.data?.title ?? "No obtenido debido a un error."
+        description.innerHTML = data[i]?.data?.description ?? "No obtenido debido a un error."
+        image.id = data[i]?.id ?? "No obtenido debido a un error."
+        card.id = data[i]?.id ?? "No obtenido debido a un error."
+        title.id = data[i]?.id ?? "No obtenido debido a un error."
+        description.id = data[i]?.id ?? "No obtenido debido a un error."
+    }
+}
+
 
 function courses() {
+    getBlogsData();
     return (
         <div>
             <Head>
@@ -99,9 +125,6 @@ function courses() {
         <div className={blogCarrouselStyles.separator}>
             <br />
         </div>
-        <BlogCarrousel />
-        <BlogCarrousel />
-        <BlogCarrousel />
         <BlogCarrousel />
         <div className={blogCarrouselStyles.separator}>
             <br />

@@ -10,19 +10,28 @@
   },
   "dependencies": {
     "@next/font": "^13.0.2",
+    "@types/axios": "^0.14.0",
     "@types/node": "18.11.9",
-    "@types/react": "18.0.24",
+    "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
+    "axios": "^1.2.0",
     "eslint-config-xo": "^0.43.1",
     "eslint-config-xo-typescript": "^0.55.0",
     "eslint-plugin-react": "^7.31.10",
+    "firebase": "^9.14.0",
+    "firebase-tools": "^11.16.1",
+    "markdown-it": "^13.0.1",
+    "markdown-to-jsx": "^7.1.7",
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-google-recaptcha": "^2.1.0",
+    "reactfire": "^4.2.2",
     "sharp": "^0.31.2",
     "typescript": ">=4.4"
   },
   "devDependencies": {
+    "@types/react-google-recaptcha": "^2.1.5",
     "@typescript-eslint/eslint-plugin": ">=5.43.0",
     "@typescript-eslint/parser": ">=5.43.0"
   }

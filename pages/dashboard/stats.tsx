@@ -2,9 +2,9 @@ import { Poppins } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { AnalyticsScript } from ".";
-import styles from "../styles/interface/Global.module.css";
-import courseStyles from "../styles/courses/Course.module.css";
+import { AnalyticsScript } from "..";
+import styles from "../../styles/interface/Global.module.css";
+import courseStyles from "../../styles/courses/Course.module.css";
 
 const poppins = Poppins({
     preload: true,
@@ -16,7 +16,7 @@ const poppins = Poppins({
 });
 
 
-function notFound() {
+function agotado() {
     return (
         <main>
             <AnalyticsScript />
@@ -40,12 +40,12 @@ function notFound() {
             </div>
         </main>
         <div className={courseStyles.globalHeader__container__title}>
-            <Image src="/images/items/cheems.webp" height={300} width={300} alt="Perro" className={courseStyles.perro}/>
+            <Image src="/images/items/perro.png" height={300} width={300} alt="Perro" className={courseStyles.perro}/>
             <h1 className={`${courseStyles.title__container__title__h1} ${poppins.className}`}>¡Lo sentimos!</h1>
-            <h2 className={`${courseStyles.title__container__title__h2} ${poppins.className}`}>No podemos encontrar la página que buscas, pero puedes ver cualquiera de las páginas de arriba</h2>
+            <h2 className={`${courseStyles.title__container__title__h2} ${poppins.className}`}>Esta página actualmente se encuentra en construcción, ¡vuelve más tarde para que no te pierdas las inaguración!</h2>
         </div>
         </main>
     )
 }
 
-export default notFound;
+export default agotado;
