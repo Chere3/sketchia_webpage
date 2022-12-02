@@ -50,8 +50,10 @@ Al igual que esta página fue creada con el motivo de crear una página y result
 
 > **Demostraciones**
 
-- [Página Principal](https://sketchia-webpage-4f3fi0uv0-chere3.vercel.app/)
-- [Página de logueo](https://sketchia-webpage-4f3fi0uv0-chere3.vercel.app/auth/login)
+- [Página Principal](https://sketchia-webpage.vercel.app/)
+- [Página de logueo](https://sketchia-webpage.vercel.app/auth/login)
+
+**`Nota: Al estar desconectada la API los cursos ni los blogs cargaran por lo mismo, es recomendable iniciar localmente la [API](https://github.com/chere3/sketchia_api) para que este pueda funcionar de manera correcta.`**
 
 
 <br><br>
